@@ -1,7 +1,7 @@
 /* =====================================================================
    SERVICES.JS  -  Services page only
       1. Support services slider (arrows, dots, swipe)
-      2. Maintenance and support card: photos slide in from the right every 3 seconds
+      2. Maintenance and support card: photo carousel, a new photo every 5 seconds
    ===================================================================== */
 (function () {
   'use strict';
@@ -48,17 +48,18 @@
   }
 
   /* -------------------------------------------------------------------
-     2. MAINTENANCE AND SUPPORT: HORIZONTAL PHOTO REEL
-     Every 3 seconds the reel moves left by one slide. When the move ends,
+     2. MAINTENANCE AND SUPPORT: PHOTO CAROUSEL
+     Every 5 seconds the reel moves left by one slide. When the move ends,
      the slide that went off the left is moved to the end and the reel
      is put back in place without animation, so the loop never jumps.
-     Pauses while the mouse is over the card (so people can read it)
-     and while the browser tab is hidden.
+     Works with any number of slides; one dot per slide is added
+     automatically. Pauses while the mouse is over the card (so people
+     can read it) and while the browser tab is hidden.
      ------------------------------------------------------------------- */
-  // A new photo arrives every 3 seconds: it rests for HOLD_TIME, then the
+  // A new photo arrives every 5 seconds: it rests for HOLD_TIME, then the
   // slide itself takes SLIDE_TIME (keep SLIDE_TIME equal to the transition
   // on .support-card__reel in pages.css).
-  var CHANGE_EVERY = 3000;
+  var CHANGE_EVERY = 5000;
   var SLIDE_TIME = 800;
   var HOLD_TIME = CHANGE_EVERY - SLIDE_TIME;
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -68,6 +69,21 @@
     if (!reel || reel.children.length < 2) return;
 
     var timer = null, hovering = false;
+    var count = reel.children.length;
+    var current = 0;                          // which slide is showing (0 = first in the HTML)
+
+    // Dots: one per slide
+    var dots = document.createElement('div');
+    dots.className = 'support-card__dots';
+    dots.setAttribute('aria-hidden', 'true');
+    for (var i = 0; i < count; i++) dots.appendChild(document.createElement('span'));
+    card.appendChild(dots);
+
+    function showDot() {
+      Array.prototype.forEach.call(dots.children, function (dot, i) {
+        dot.classList.toggle('is-active', i === current);
+      });
+    }
 
     function schedule() {
       clearTimeout(timer);
@@ -82,6 +98,8 @@
 
     function moveFirstToEnd() {
       reel.appendChild(reel.firstElementChild);
+      current = (current + 1) % count;
+      showDot();
     }
 
     reel.addEventListener('transitionend', function (e) {
@@ -96,6 +114,7 @@
 
     card.addEventListener('mouseenter', function () { hovering = true; });
     card.addEventListener('mouseleave', function () { hovering = false; });
+    showDot();
     schedule();
   });
 })();
