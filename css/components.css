@@ -5,7 +5,7 @@
       2. Photo cards (Home "What we do")
       3. Engineering cards (Services)
       4. Advisory cards (Services)
-      5. Feature cards (Siemens "How we support you")
+      5. Support steps (Siemens "How we support you")
       6. Tags
       7. Testimonials (Home)
       8. Call-to-action band
@@ -238,66 +238,57 @@ a:hover .link-arrow .icon { transform: translateX(4px); }
 
 
 /* ---------------------------------------------------------------------
-   5. FEATURE CARDS (Siemens "How we support you")
-   White cards: on hover the card lifts, a teal glow traces the border,
-   the icon fills with colour and a line grows under the title.
+   5. SUPPORT STEPS (Siemens "How we support you")
+   Numbered steps joined by a teal line: in a row on desktop, a column
+   on phones. On hover a step lifts and its icon fills with colour.
    --------------------------------------------------------------------- */
-.feature-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px; }
-.feature-grid > * { grid-column: span 2; }
-.feature-grid > :nth-child(4) { grid-column: 2 / span 2; }     /* centre the last two cards */
-.feature-card {
+.support-steps {
+  --step-icon: 64px;
   position: relative;
-  display: flex; flex-direction: column; gap: 16px;
-  padding: 34px 30px 36px;
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  overflow: hidden;
-  isolation: isolate;
-  transition: translate .35s var(--ease), box-shadow .35s, border-color .35s;
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px;
+  list-style: none; margin: 0; padding: 0;
 }
-.feature-card::before {           /* soft teal glow in the corner, grows on hover */
+.support-steps::before {   /* the line joining the icons */
   content: "";
-  position: absolute;
-  width: 220px; height: 220px;
-  right: -110px; top: -110px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 230, 220, .28), transparent 70%);
-  z-index: -1;
-  transition: transform .6s var(--ease);
-}
-.feature-card:hover { translate: 0 -8px; border-color: rgba(0, 153, 153, .45); box-shadow: 0 24px 50px rgba(0, 0, 40, .12); }
-.feature-card:hover::before { transform: scale(2.4); }
-.feature-card__icon {
-  width: 56px; height: 56px;
-  display: inline-flex; align-items: center; justify-content: center;
-  border-radius: 16px;
-  background: rgba(0, 153, 153, .1);
-  color: var(--siemens-teal);
-  transition: background-color .3s, color .3s, transform .3s;
-}
-.feature-card:hover .feature-card__icon { background: var(--siemens-teal); color: var(--white); transform: rotate(-6deg); }
-.feature-card h3 { font-size: 21px; color: var(--siemens-navy); }
-.feature-card h3::after {
-  content: "";
-  display: block;
-  width: 36px; height: 3px;
-  margin-top: 14px;
-  border-radius: 2px;
+  position: absolute; left: 10%; right: 10%; top: calc(var(--step-icon) / 2 + 28px);
+  height: 2px;
   background: linear-gradient(90deg, var(--siemens-teal), var(--siemens-mint));
-  transition: width .4s var(--ease);
+  opacity: .45;
 }
-.feature-card:hover h3::after { width: 100%; }
-.feature-card p { font-size: 16px; line-height: 1.7; color: var(--text-soft); }
+.support-step {
+  position: relative;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  padding: 0 10px 8px;
+  text-align: center;
+  transition: translate .3s var(--ease);
+}
+.support-step__num { font: 700 13px/1 var(--font-body); letter-spacing: .16em; color: var(--siemens-teal); height: 16px; }
+.support-step__icon {
+  position: relative;            /* sits on top of the line */
+  width: var(--step-icon); height: var(--step-icon);
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: var(--white);
+  border: 2px solid rgba(0, 153, 153, .35);
+  box-shadow: 0 10px 24px rgba(0, 0, 40, .08);
+  color: var(--siemens-teal);
+  transition: background .3s, color .3s, border-color .3s;
+}
+.support-step h3 { margin-top: 6px; font-size: 18px; line-height: 1.3; color: var(--siemens-navy); }
+.support-step p { font-size: 15px; line-height: 1.65; color: var(--text-soft); }
+.support-step:hover { translate: 0 -6px; }
+.support-step:hover .support-step__icon { background: var(--siemens-teal); border-color: var(--siemens-teal); color: var(--white); }
 
 @media (max-width: 1024px) {
-  .feature-grid { grid-template-columns: 1fr 1fr; }
-  .feature-grid > *, .feature-grid > :nth-child(4) { grid-column: auto; }
-  .feature-grid > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .support-steps { grid-template-columns: repeat(3, 1fr); row-gap: 40px; }
+  .support-steps::before { display: none; }
 }
-@media (max-width: 700px) {
-  .feature-grid { grid-template-columns: 1fr; }
-  .feature-grid > :last-child:nth-child(odd) { grid-column: auto; }
+@media (max-width: 700px) {   /* one column: icon on the left, line runs down */
+  .support-steps { grid-template-columns: 1fr; row-gap: 28px; }
+  .support-steps::before { display: block; left: calc(var(--step-icon) / 2 - 1px); right: auto; top: 30px; bottom: 30px; width: 2px; height: auto; background: linear-gradient(180deg, var(--siemens-teal), var(--siemens-mint)); }
+  .support-step { display: grid; grid-template-columns: var(--step-icon) 1fr; column-gap: 18px; row-gap: 4px; align-items: start; text-align: left; padding: 0; }
+  .support-step__icon { grid-row: 1 / 4; }
+  .support-step__num, .support-step h3, .support-step p { grid-column: 2; margin: 0; }
 }
 
 
