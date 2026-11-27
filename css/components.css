@@ -552,7 +552,8 @@ textarea.input { min-height: 140px; padding: 12px 14px; resize: vertical; }
 /* ---------------------------------------------------------------------
    13. CLIENT LOGO CARDS (Projects portfolio)
    --------------------------------------------------------------------- */
-.client-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+.client-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }   /* 4 columns; 3 on tablets, 2 on phones */
+@media (max-width: 1024px) { .client-grid { grid-template-columns: repeat(3, 1fr); } }
 .client-card {
   position: relative;
   overflow: hidden;

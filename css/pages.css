@@ -362,25 +362,40 @@
 .story__lead { padding-left: 22px; border-left: 4px solid var(--orange); font-size: 21px; line-height: 1.6; font-weight: 500; color: var(--navy); }
 .story__text p:not(.story__lead) { font-size: 17px; line-height: 1.75; color: var(--text-soft); }
 
-/* "Where we operate": a light, simple card */
+/* "Where we operate": light card with soft brand-colour glows and a
+   faint dot pattern (like a map) that fades out towards the bottom */
 .locations {
+  position: relative;
+  overflow: hidden;
   padding: 40px 38px;
   border-radius: 24px;
-  background: linear-gradient(160deg, var(--white) 0%, #F2F6FB 100%);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(21, 89, 237, .14), transparent 55%),
+    radial-gradient(circle at 0% 100%, rgba(232, 128, 26, .12), transparent 50%),
+    linear-gradient(160deg, var(--white) 0%, #F3F7FC 100%);
   border: 1px solid var(--line);
   box-shadow: 0 18px 44px rgba(25, 42, 61, .10);
   color: var(--navy);
 }
+.locations::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(25, 42, 61, .16) 1.2px, transparent 1.3px);
+  background-size: 18px 18px;
+  -webkit-mask-image: linear-gradient(200deg, #000 0%, transparent 75%);
+          mask-image: linear-gradient(200deg, #000 0%, transparent 75%);
+}
+.locations > * { position: relative; }
 .locations__title { font: 600 13px/1 var(--font-body); letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-bottom: 30px; }
 .location { display: flex; align-items: center; gap: 18px; }
-.location__pin { width: 52px; height: 52px; flex: none; display: inline-flex; align-items: center; justify-content: center; border-radius: 14px; background: var(--orange); color: var(--white); }
+.location__pin { width: 52px; height: 52px; flex: none; display: inline-flex; align-items: center; justify-content: center; border-radius: 14px; background: var(--orange); color: var(--white); box-shadow: 0 8px 18px rgba(25, 42, 61, .18); }
 .locations__dash + .location .location__pin { background: var(--blue); }   /* second city */
 .location strong { display: block; font: 700 26px/1 var(--font-head); }
 .location small { font-size: 15px; color: var(--text-soft); }
 .locations__dash { margin-left: 25px; height: 46px; border-left: 2px dashed #B8C6D6; }
 @media (max-width: 600px)  { .story__text h2 { font-size: clamp(28px, 8vw, 34px); } .story__lead { font-size: 18px; } .locations { padding: 32px 24px; } }
 
-/* ---- 6b. Mission and vision: photo cards on white ---- */
+/* ---- 6b. Mission and vision: two bold statement cards ---- */
 .purpose { position: relative; overflow: hidden; background: var(--white); }
 .purpose__grid {    /* faint drifting grid */
   position: absolute; inset: -60px;
@@ -396,27 +411,48 @@
 @keyframes orb-2 { 50% { transform: translate(-70px, -50px); } }
 .purpose > .container { position: relative; }
 
-.purpose-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 980px; margin-inline: auto; }
+.purpose-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 1040px; margin-inline: auto; }
 .purpose-card {
+  --accent: var(--orange);
+  position: relative;
   overflow: hidden;
-  border-radius: 22px;
-  background: var(--white);
-  border: 1px solid var(--line);
-  box-shadow: 0 18px 44px rgba(25, 42, 61, .12);
+  display: flex; flex-direction: column; gap: 26px;
+  padding: 40px 40px 44px;
+  border-radius: 24px;
+  background: linear-gradient(150deg, var(--navy) 0%, var(--navy-deep) 100%);
+  color: var(--white);
+  box-shadow: 0 24px 54px rgba(25, 42, 61, .20);
 }
-.purpose-card__inner { height: 100%; display: flex; flex-direction: column; }
-.purpose-card__art { height: 210px; overflow: hidden; }
-.purpose-card__art img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
-.purpose-card:hover .purpose-card__art img { transform: scale(1.04); }
-.purpose-card__text { padding: 28px 32px 32px; display: flex; flex-direction: column; gap: 12px; border-top: 4px solid var(--blue); }
-.purpose-card--vision .purpose-card__text { border-top-color: var(--orange); }
-.purpose-card__tag { display: flex; align-items: center; gap: 12px; font: 600 12.5px/1 var(--font-body); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
-.purpose-card__tag b { font: 800 20px/1 var(--font-head); color: var(--orange); letter-spacing: 0; }
-.purpose-card__tag i { width: 32px; height: 2px; background: currentColor; opacity: .5; }    /* the dash */
-.purpose-card h3 { color: var(--navy); font-size: 26px; }
-.purpose-card p { font-size: 16px; line-height: 1.7; color: var(--text-soft); }
-@media (max-width: 900px) { .purpose-cards { grid-template-columns: 1fr; max-width: 560px; } }
-@media (max-width: 600px) { .purpose-card__text { padding: 24px 22px 26px; } .purpose-card__art { height: 180px; } .purpose-card h3 { font-size: 23px; } }
+.purpose-card--vision { --accent: #FFB866; background: linear-gradient(150deg, var(--blue) 0%, var(--blue-dark) 100%); }
+.purpose-card::after {   /* accent line along the bottom */
+  content: ""; position: absolute; left: 40px; right: 40px; bottom: 0;
+  height: 4px; border-radius: 4px 4px 0 0; background: var(--accent);
+}
+.purpose-card__num {   /* large faint number in the corner */
+  position: absolute; right: 26px; top: 6px;
+  font: 800 120px/1 var(--font-head);
+  color: rgba(255, 255, 255, .07);
+  pointer-events: none;
+}
+.purpose-card__head { display: flex; align-items: center; gap: 14px; }
+.purpose-card__icon {
+  width: 48px; height: 48px; flex: none;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .10);
+  color: var(--accent);
+}
+.purpose-card h3 { color: var(--accent); font: 600 14px/1 var(--font-body); letter-spacing: .18em; text-transform: uppercase; }
+.purpose-card__statement { position: relative; font: 700 21px/1.5 var(--font-head); color: var(--white); }
+.purpose-card--vision .purpose-card__statement { font-size: 28px; line-height: 1.35; margin-block: auto; }   /* shorter text: larger, centred in the card */
+@media (max-width: 900px) { .purpose-cards { grid-template-columns: 1fr; max-width: 620px; } }
+@media (max-width: 600px) {
+  .purpose-card { padding: 30px 24px 34px; gap: 20px; }
+  .purpose-card::after { left: 24px; right: 24px; }
+  .purpose-card__num { font-size: 88px; right: 16px; }
+  .purpose-card__statement { font-size: 18px; }
+  .purpose-card--vision .purpose-card__statement { font-size: 22px; }
+}
 
 /* ---- 6c. Core values: three colour waves draw across, then the cards rise ----
    js/pages/about.js adds .is-ready then .is-in when the section scrolls into view. */
