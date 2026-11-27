@@ -395,66 +395,74 @@
 .locations__dash { margin-left: 25px; height: 46px; border-left: 2px dashed #B8C6D6; }
 @media (max-width: 600px)  { .story__text h2 { font-size: clamp(28px, 8vw, 34px); } .story__lead { font-size: 18px; } .locations { padding: 32px 24px; } }
 
-/* ---- 6b. Mission and vision: two bold statement cards ---- */
-.purpose { position: relative; overflow: hidden; background: var(--white); }
-.purpose__grid {    /* faint drifting grid */
-  position: absolute; inset: -60px;
-  background-image: linear-gradient(rgba(25, 42, 61, .06) 1px, transparent 1px), linear-gradient(90deg, rgba(25, 42, 61, .06) 1px, transparent 1px);
-  background-size: 56px 56px;
-  animation: grid-drift 24s linear infinite;
-}
-@keyframes grid-drift { to { transform: translate(56px, 56px); } }
-.purpose__orb { position: absolute; width: 460px; height: 460px; border-radius: 50%; filter: blur(90px); opacity: .14; }
-.purpose__orb--1 { left: -120px; top: -80px; background: var(--blue); animation: orb-1 14s ease-in-out infinite; }
-.purpose__orb--2 { right: -120px; bottom: -100px; background: var(--orange); animation: orb-2 16s ease-in-out infinite; }
-@keyframes orb-1 { 50% { transform: translate(80px, 60px); } }
-@keyframes orb-2 { 50% { transform: translate(-70px, -50px); } }
-.purpose > .container { position: relative; }
-
-.purpose-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 1040px; margin-inline: auto; }
+/* ---- 6b. What drives us: mission and vision cards ----
+   Text colours are kept soft on purpose: off-white headlines, light grey body. */
+.purpose { background: var(--cloud); }
+.purpose-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 1140px; margin-inline: auto; }
 .purpose-card {
-  --accent: var(--orange);
+  --label: var(--orange);
+  --body: #B9C6D4;                       /* body text on navy */
+  --soft-line: rgba(255, 255, 255, .12);
   position: relative;
   overflow: hidden;
-  display: flex; flex-direction: column; gap: 26px;
-  padding: 40px 40px 44px;
-  border-radius: 24px;
-  background: linear-gradient(150deg, var(--navy) 0%, var(--navy-deep) 100%);
-  color: var(--white);
-  box-shadow: 0 24px 54px rgba(25, 42, 61, .20);
+  display: flex; flex-direction: column; gap: 28px;
+  padding: 48px 48px 40px;
+  border-radius: 22px;
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%);
+  box-shadow: 0 24px 54px rgba(25, 42, 61, .18);
 }
-.purpose-card--vision { --accent: #FFB866; background: linear-gradient(150deg, var(--blue) 0%, var(--blue-dark) 100%); }
-.purpose-card::after {   /* accent line along the bottom */
-  content: ""; position: absolute; left: 40px; right: 40px; bottom: 0;
-  height: 4px; border-radius: 4px 4px 0 0; background: var(--accent);
+.purpose-card--vision {
+  --label: #CFE0FF;
+  --body: #DCE6FB;                       /* body text on blue */
+  --soft-line: rgba(255, 255, 255, .20);
+  background: linear-gradient(160deg, var(--blue) 0%, var(--blue-dark) 100%);
+}
+.purpose-card::before {   /* small orange tab at the top */
+  content: ""; position: absolute; left: 48px; top: 0;
+  width: 64px; height: 4px; border-radius: 0 0 4px 4px; background: var(--orange);
 }
 .purpose-card__num {   /* large faint number in the corner */
-  position: absolute; right: 26px; top: 6px;
-  font: 800 120px/1 var(--font-head);
-  color: rgba(255, 255, 255, .07);
+  position: absolute; right: 32px; top: 22px;
+  font: 800 110px/1 var(--font-head);
+  color: rgba(255, 255, 255, .05);
   pointer-events: none;
 }
-.purpose-card__head { display: flex; align-items: center; gap: 16px; }
+.purpose-card__head { position: relative; display: flex; align-items: flex-start; gap: 20px; }
 .purpose-card__icon {
-  width: 48px; height: 48px; flex: none;
+  width: 60px; height: 60px; flex: none;
   display: inline-flex; align-items: center; justify-content: center;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, .10);
-  color: var(--accent);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid var(--soft-line);
+  color: var(--orange);
 }
-/* Card title: white heading with a short accent underline */
-.purpose-card h3 { position: relative; padding-bottom: 12px; color: var(--white); font: 700 26px/1.1 var(--font-head); }
-.purpose-card h3::after { content: ""; position: absolute; left: 0; bottom: 0; width: 40px; height: 3px; border-radius: 3px; background: var(--accent); }
-.purpose-card__statement { position: relative; font: 700 21px/1.5 var(--font-head); color: var(--white); }
-.purpose-card--vision .purpose-card__statement { font-size: 28px; line-height: 1.35; margin-block: auto; }   /* shorter text: larger, centred in the card */
+.purpose-card--vision .purpose-card__icon { color: #F4F8FF; }
+.purpose-card__label { font: 600 13px/1 var(--font-body); letter-spacing: .16em; text-transform: uppercase; color: var(--label); margin: 6px 0 10px; }
+.purpose-card h3 { color: #F4F7FB; font: 700 28px/1.2 var(--font-head); }
+.purpose-card__statement { font-size: 17.5px; line-height: 1.8; color: var(--body); }
+.purpose-card__statement strong { color: #F4F7FB; font-weight: 600; }
+.purpose-card--vision .purpose-card__statement { font-size: 20px; line-height: 1.7; }
+.purpose-card__foot { margin-top: auto; padding-top: 26px; border-top: 1px solid var(--soft-line); }
+.purpose-card__foot-title { font: 600 12.5px/1 var(--font-body); letter-spacing: .16em; text-transform: uppercase; color: var(--body); opacity: .75; margin-bottom: 14px; }
+.purpose-card__chips { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 0; padding: 0; }
+.purpose-card__chips li {
+  padding: 9px 15px;
+  border-radius: 999px;
+  border: 1px solid var(--soft-line);
+  background: rgba(255, 255, 255, .04);
+  font: 500 14.5px/1 var(--font-body);
+  color: #E8EEF5;
+}
 @media (max-width: 900px) { .purpose-cards { grid-template-columns: 1fr; max-width: 620px; } }
 @media (max-width: 600px) {
-  .purpose-card { padding: 30px 24px 34px; gap: 20px; }
-  .purpose-card::after { left: 24px; right: 24px; }
-  .purpose-card__num { font-size: 88px; right: 16px; }
+  .purpose-card { padding: 38px 24px 30px; gap: 22px; }
+  .purpose-card::before { left: 24px; }
+  .purpose-card__num { font-size: 80px; right: 18px; }
+  .purpose-card__head { gap: 16px; }
+  .purpose-card__icon { width: 50px; height: 50px; }
   .purpose-card h3 { font-size: 22px; }
-  .purpose-card__statement { font-size: 18px; }
-  .purpose-card--vision .purpose-card__statement { font-size: 22px; }
+  .purpose-card__statement { font-size: 16.5px; }
+  .purpose-card--vision .purpose-card__statement { font-size: 18px; }
 }
 
 /* ---- 6c. Core values: three colour waves draw across, then the cards rise ----
