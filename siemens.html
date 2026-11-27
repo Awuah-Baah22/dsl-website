@@ -1,0 +1,786 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dos Santos Limited</title>
+  <meta name="description" content="Dos Santos Limited is an Authorized Siemens Partner for low-voltage, medium-voltage and process automation products, supply, installation and support.">
+
+  <!-- Social sharing preview (WhatsApp, LinkedIn, Facebook) -->
+  <meta property="og:title" content="Siemens Solutions | Dos Santos Limited">
+  <meta property="og:description" content="Dos Santos Limited is an Authorized Siemens Partner for low-voltage, medium-voltage and process automation products, supply, installation and support.">
+  <meta property="og:image" content="images/site/logo.png">
+  <meta name="theme-color" content="#192A3D">
+  <link rel="icon" href="images/site/logo-light.png">
+
+  <!-- Fonts: Inter (text) and Fira Sans (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Sans:wght@500;600;700;800&display=swap">
+
+  <!-- Styles: base -> layout -> components -> page sections -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <!-- Lets the CSS know JavaScript is on (used by the scroll animations) -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="page-siemens">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ================================================================
+     HEADER: logo, main menu, mobile menu button.
+     Same on every page. If you change a link, change it on all pages.
+     ================================================================ -->
+<header class="site-header" id="top">
+  <div class="container header__inner">
+    <a class="header__logo" href="index.html" aria-label="Dos Santos Limited, home">
+      <img src="images/site/logo.png" alt="Dos Santos Limited" width="132" height="66">
+    </a>
+
+    <!-- Main menu (becomes a slide-down panel on phones and tablets) -->
+    <nav class="nav" id="main-nav" aria-label="Main">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="services.html">Services</a>
+      <a class="nav__link is-active" aria-current="page" href="siemens.html">Siemens</a>
+      <div class="nav__item has-dropdown">
+        <a class="nav__link" href="projects.html" aria-haspopup="true">Projects <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="nav__dropdown">
+          <a class="nav__sublink" href="projects.html#eni">ENI Ghana track record</a>
+          <a class="nav__sublink" href="projects.html#portfolio">Project portfolio</a>
+          <a class="nav__sublink" href="projects.html#gallery">Gallery</a>
+        </div>
+      </div>
+      <div class="nav__item has-dropdown">
+        <a class="nav__link" href="about.html" aria-haspopup="true">About <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="nav__dropdown">
+          <a class="nav__sublink" href="esg.html">ESG</a>
+        </div>
+      </div>
+      <a class="nav__link" href="contact.html">Contact</a>
+      <a class="btn btn--primary nav__cta" href="contact.html?book#form">Book an appointment</a>
+    </nav>
+    <a class="btn btn--primary header__cta" href="contact.html?book#form">Book an appointment</a>
+
+    <!-- Mobile menu button (shows below 1180px) -->
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================================================================
+       HERO
+       YOUR PHOTO: images/siemens/hero.jpg (the illustration shows until it is added).
+       "View the product range" opens another site in a new tab.
+       Replace the href below with the exact page you want.
+       ================================================================ -->
+  <section class="page-hero siemens-hero">
+    <div class="page-hero__bg" aria-hidden="true"><img data-slot src="images/siemens/hero-siemen" data-fallback="images/illustrations/siemens-hero.svg" alt=""></div>
+    <div class="page-hero__shade" aria-hidden="true"></div>
+    <div class="container page-hero__inner page-hero__inner--single">
+      <div class="page-hero__text reveal">
+        <span class="eyebrow eyebrow--line">Siemens Authorized Partner</span>
+        <h1>Siemens technology, delivered and supported locally</h1>
+        <p class="page-hero__lead">As an Authorized Partner for Siemens Low-Voltage and Medium-Voltage Solutions, we combine world-class technology with local expertise to deliver dependable, high-quality outcomes that meet international standards.</p>
+        <div class="btn-row">
+          <!-- PRODUCT RANGE LINK: change the href to the page you want -->
+          <a class="btn btn--siemens" href="https://www.siemens.com/global/en/products.html" target="_blank" rel="noopener">View the product range <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg></a>
+          <a class="btn btn--ghost" href="contact.html?topic=siemens#form">Request a quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       PRODUCTS
+       Each card is a link. Change href="#" to the product's page.
+       Photos: images/siemens/<product-name>.jpg (the file name is in each card).
+       Rows can be dragged sideways with the mouse or swiped on phones.
+       ================================================================ -->
+
+  <!-- ---- Low voltage ---- -->
+  <section class="section product-section" id="lv">
+    <div class="container stack">
+      <div class="section-head section-head--left reveal">
+        <span class="label-line">Low voltage</span>
+        <h2>Authorized Siemens LV solutions partner</h2>
+        <p>Industrial controls, power distribution products and complete switchgear systems for commercial and industrial installations.</p>
+      </div>
+      <div class="product-rows">
+        <!-- SIRIUS: Industrial controls -->
+        <div class="product-row">
+          <div class="product-row__family">
+            <span class="product-row__label">Products</span>
+            <strong>SIRIUS</strong>
+            <span>Industrial controls</span>
+          </div>
+          <div class="product-row__track" tabindex="0" aria-label="SIRIUS products, scroll sideways">
+            <a class="product-card reveal" href="#" data-product="switching-and-protection-devices">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/switching-pro.png" alt="Siemens Switching and protection devices" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Switching and protection devices</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="soft-and-motor-starters">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/soft.png" alt="Siemens Soft and motor starters" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Soft and motor starters</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="monitoring-and-control-devices">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/simocode.jpg" alt="Siemens Monitoring and control devices" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Monitoring and control devices</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="safety-technology">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/safety.jpg" alt="Siemens Safety technology" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Safety technology</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="position-and-safety-switches">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/position and safety.avif" alt="Siemens Position and safety switches" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Position and safety switches</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="commanding-and-signaling-devices">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/commanding-and-signaling-devices.jpg" alt="Siemens Commanding and signaling devices" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Commanding and signaling devices</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- SENTRON: Power distribution -->
+        <div class="product-row">
+          <div class="product-row__family">
+            <span class="product-row__label">Products</span>
+            <strong>SENTRON</strong>
+            <span>Power distribution</span>
+          </div>
+          <div class="product-row__track" tabindex="0" aria-label="SENTRON products, scroll sideways">
+            <a class="product-card reveal" href="#" data-product="mcbs">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/mcb.jpg" alt="Siemens MCBs" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>MCBs</h4>
+                <p>Miniature circuit breakers</p>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="rccbs">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/rccb.webp" alt="Siemens RCCBs" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>RCCBs</h4>
+                <p>Residual current devices</p>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="mccbs">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/mccb.webp" alt="Siemens MCCBs" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>MCCBs</h4>
+                <p>Moulded case breakers</p>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="acbs">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/acbs.jpg" alt="Siemens ACBs" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>ACBs</h4>
+                <p>Air circuit breakers</p>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="measuring-and-monitoring-devices">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/7km.jpg" alt="Siemens Measuring and monitoring devices" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Measuring and monitoring devices</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="switching-and-distribution-components">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/sentron.jpg" alt="Siemens Switching and distribution components" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Switching and distribution components</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- SIVACON and ALPHA: Switchgear and distribution systems -->
+        <div class="product-row">
+          <div class="product-row__family">
+            <span class="product-row__label">Systems</span>
+            <strong>SIVACON and ALPHA</strong>
+            <span>Switchgear and distribution systems</span>
+          </div>
+          <div class="product-row__track" tabindex="0" aria-label="SIVACON and ALPHA products, scroll sideways">
+            <a class="product-card reveal" href="#" data-product="system-cubicles">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/system-cubicle.jpg" alt="Siemens System cubicles" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>System cubicles</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="switchgear">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/switch-gear.jpg" alt="Siemens Switchgear" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Switchgear</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="power-distributors-and-distribution-boards">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/distribution_boards.png" alt="Siemens Power distributors and distribution boards" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Power distributors and distribution boards</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---- Medium voltage ---- -->
+  <section class="section product-section" id="mv">
+    <div class="container stack">
+      <div class="section-head section-head--left reveal">
+        <span class="label-line">Medium voltage</span>
+        <h2>Authorized Siemens MV solutions partner</h2>
+        <p>Medium-voltage components, systems and solutions, backed by Siemens services.</p>
+      </div>
+      <div class="product-rows">
+        <!-- Components and switchgear: Medium-voltage components, systems and solutions -->
+        <div class="product-row">
+          <div class="product-row__family">
+            <span class="product-row__label">Medium voltage</span>
+            <strong>Components and switchgear</strong>
+            <span>Medium-voltage components, systems and solutions</span>
+          </div>
+          <div class="product-row__track" tabindex="0" aria-label="Components and switchgear products, scroll sideways">
+            <a class="product-card reveal" href="#" data-product="components">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/components.jpg" alt="Siemens Components" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Components</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="primary-air-insulated-switchgear">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/air-insulated.jpg" alt="Siemens Primary air-insulated switchgear" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Primary air-insulated switchgear</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="gas-insulated-switchgear">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/gas-insulated.jpg" alt="Siemens Gas-insulated switchgear" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Gas-insulated switchgear</h4>
+                <p>Primary and secondary</p>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="sf6-free-blue-gis">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/sf6.jpg" alt="Siemens SF6-free blue GIS" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>SF6-free blue GIS</h4>
+                <p>Primary and secondary</p>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="generator-circuit-breaker-switchgear">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/generator circuit breaker.webp" alt="Siemens Generator circuit breaker switchgear" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Generator circuit breaker switchgear</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="photovoltaic">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/" alt="Siemens Photovoltaic" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Photovoltaic</h4>
+                <p>PV inverter systems</p>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Automation and protection: For high- and medium-voltage systems -->
+        <div class="product-row">
+          <div class="product-row__family">
+            <span class="product-row__label">Systems</span>
+            <strong>Automation and protection</strong>
+            <span>For high- and medium-voltage systems</span>
+          </div>
+          <div class="product-row__track" tabindex="0" aria-label="Automation and protection products, scroll sideways">
+            <a class="product-card reveal" href="#" data-product="protection">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/protect.png" alt="Siemens Protection" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Protection</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="automation">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/sicam-automation.webp" alt="Siemens Automation" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Automation</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="power-quality">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/power-supply.webp" alt="Siemens Power quality" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Power quality</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="smart-communication">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/smart comm.webp" alt="Siemens Smart communication" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Smart communication</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Distribution and solutions: Outdoor systems and E-House -->
+        <div class="product-row">
+          <div class="product-row__family">
+            <span class="product-row__label">Solutions</span>
+            <strong>Distribution and solutions</strong>
+            <span>Outdoor systems and E-House</span>
+          </div>
+          <div class="product-row__track" tabindex="0" aria-label="Distribution and solutions products, scroll sideways">
+            <a class="product-card reveal" href="#" data-product="outdoor-distribution-systems">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/outdoor.webp" alt="Siemens Outdoor distribution systems" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Outdoor distribution systems</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="solution-business">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/bu" alt="Siemens Solution business" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Solution business</h4>
+                <p>E-House systems</p>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---- Process automation ---- -->
+  <section class="section product-section" id="pa">
+    <div class="container stack">
+      <div class="section-head section-head--left reveal">
+        <span class="label-line">Process automation</span>
+        <h2>Authorized Siemens process automation solutions partner</h2>
+        <p>Field instrumentation, analytics and digital tools for oil and gas, mining, energy and manufacturing operations.</p>
+      </div>
+      <div class="product-rows">
+        <!-- Field instrumentation: Process measurement -->
+        <div class="product-row">
+          <div class="product-row__family">
+            <span class="product-row__label">Process automation</span>
+            <strong>Field instrumentation</strong>
+            <span>Process measurement</span>
+          </div>
+          <div class="product-row__track" tabindex="0" aria-label="Field instrumentation products, scroll sideways">
+            <a class="product-card reveal" href="#" data-product="flow">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/flow.webp" alt="Siemens Flow" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Flow</h4>
+                <p>Electromagnetic, Coriolis, ultrasonic, vortex</p>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="temperature">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/temperature.webp" alt="Siemens Temperature" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Temperature</h4>
+                <p>Rail, field, head, sensor, multipoint</p>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="valve-positioners">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/valve-positioners.webp" alt="Siemens Valve positioners" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Valve positioners</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="level">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/level.webp" alt="Siemens Level" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Level</h4>
+                <p>Capacitance, radar, ultrasonic</p>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="pressure">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/pressure.webp" alt="Siemens Pressure" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Pressure</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="weighing">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/weighing.webp" alt="Siemens Weighing" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Weighing</h4>
+                <p>SIWAREX, mass dynamics</p>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Analytics and software: Gas analysis and integration -->
+        <div class="product-row">
+          <div class="product-row__family">
+            <span class="product-row__label">Process automation</span>
+            <strong>Analytics and software</strong>
+            <span>Gas analysis and integration</span>
+          </div>
+          <div class="product-row__track" tabindex="0" aria-label="Analytics and software products, scroll sideways">
+            <a class="product-card reveal" href="#" data-product="continuous-gas-analyzers">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/gas-analysis.webp" alt="Siemens Continuous gas analyzers" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Continuous gas analyzers</h4>
+                <p>CGA and laser</p>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="gas-chromatographs">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/chromatographs.webp" alt="Siemens Gas chromatographs" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Gas chromatographs</h4>
+                <p>GC and integration</p>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <!-- this is commented -->
+            <!-- <a class="product-card reveal" href="#" data-product="software">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/software.webp" alt="Siemens Software" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Software</h4>
+                <p>ASM, TIA / PCS 7 integration</p>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a> -->
+          </div>
+        </div>
+
+        <!-- Digital and asset management: Apps for process plants -->
+        <!-- <div class="product-row">
+          <div class="product-row__family">
+            <span class="product-row__label">Digital</span>
+            <strong>Digital and asset management</strong>
+            <span>Apps for process plants</span>
+          </div>
+          <div class="product-row__track" tabindex="0" aria-label="Digital and asset management products, scroll sideways">
+            <a class="product-card reveal" href="#" data-product="scm-iq">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/scm-iq.jpg" alt="Siemens SCM IQ" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>SCM IQ</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="store-iq">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/store-iq.jpg" alt="Siemens store IQ" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>store IQ</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="serve-iq">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/serve-iq.jpg" alt="Siemens serve IQ" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>serve IQ</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="mobile-iq">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/mobile-iq.jpg" alt="Siemens mobile IQ" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>mobile IQ</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="analyzer-system-manager">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/analyzer-system-manager.jpg" alt="Siemens Analyzer System Manager" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>Analyzer System Manager</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="aps-sam-iq">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/aps-sam-iq.jpg" alt="Siemens APS / SAM IQ" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>APS / SAM IQ</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+          </div>
+        </div> -->
+
+        <!-- Connectivity: Wireless and remote terminal units -->
+        <div class="product-row">
+          <div class="product-row__family">
+            <span class="product-row__label">Connectivity</span>
+            <strong>Connectivity</strong>
+            <span>Wireless and remote terminal units</span>
+          </div>
+          <div class="product-row__track" tabindex="0" aria-label="Connectivity products, scroll sideways">
+            <a class="product-card reveal" href="#" data-product="aw050">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/AW050_LW_180_h.jpg" alt="Siemens AW050" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>AW050</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <a class="product-card reveal" href="#" data-product="ms200-cc220">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/m200.webp" alt="Siemens MS200 / CC220" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>MS200 / CC220</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a>
+            <!-- <a class="product-card reveal" href="#" data-product="simatic-rtu30xx">
+              <div class="product-card__media">
+                <img data-slot src="images/siemens/rtu30xx.webp" alt="Siemens SIMATIC RTU30xx" loading="lazy">
+              </div>
+              <div class="product-card__body">
+                <h4>SIMATIC RTU30xx</h4>
+                <span class="product-card__more">View details <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              </div>
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       HOW WE SUPPORT YOU (white background, cards rise in on scroll)
+       ================================================================ -->
+  <section class="section support-section" id="support">
+    <div class="container stack">
+      <div class="section-head reveal">
+        <span class="eyebrow">How we support you</span>
+        <h2>From specification to commissioning and beyond</h2>
+        <p>Siemens equipment is only as reliable as the people who specify, install and maintain it. Our engineers support every stage.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card reveal">
+          <span class="feature-card__icon"><svg class="icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4zM3 7v10l9 4 9-4V7M12 11v10"/></svg></span>
+          <h3>LV/MV protection device distribution</h3>
+          <p>MCBs, MCCBs, ACBs, RCCBs and contactors sourced directly from Siemens as an authorized distributor.</p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="feature-card__icon"><svg class="icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17L17 4l3 3L7 20zM8 13l2 2M11 10l2 2M14 7l2 2"/></svg></span>
+          <h3>Design and engineering</h3>
+          <p>Drawings and designs, load calculations, panel schedules and system planning.</p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="feature-card__icon"><svg class="icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3v5M15 3v5M6 8h12v3a6 6 0 01-12 0zM12 17v4"/></svg></span>
+          <h3>Installation and commissioning</h3>
+          <p>End-to-end electrical installation, panel wiring, testing and commissioning across LV/MV systems.</p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="feature-card__icon"><svg class="icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7 12l3-3 2 2 4-4"/></svg></span>
+          <h3>SCADA, ENMS and digital services</h3>
+          <p>Configuration, firmware management and modification of energy and network management systems.</p>
+        </div>
+        <div class="feature-card reveal">
+          <span class="feature-card__icon"><svg class="icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6.5a4 4 0 005 5L13 18a2.1 2.1 0 01-3-3l6.5-6.5a4 4 0 01-5-5z"/></svg></span>
+          <h3>Maintenance and support</h3>
+          <p>Troubleshooting, spares procurement, repair, testing and re-commissioning of critical power assets, including UPS and substations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       CALL TO ACTION
+       ================================================================ -->
+  <section class="cta-band">
+    <div class="container cta-band__inner">
+      <div class="cta-band__text reveal">
+        <span class="eyebrow eyebrow--orange">Siemens enquiries</span>
+        <h2>Need Siemens LV, MV or process automation equipment?</h2>
+        <p>Tell us what you need. Our team will advise on the right Siemens products and support your project from supply to commissioning.</p>
+      </div>
+      <div class="btn-row reveal">
+        <a class="btn btn--orange" href="contact.html#form">Talk to our team <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn--ghost" href="contact.html?topic=siemens#form">Request a quote</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- ================================================================
+     FOOTER: company summary, services, office addresses.
+     Same on every page.
+     ================================================================ -->
+<footer class="site-footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="index.html" aria-label="Dos Santos Limited, home"><img src="images/site/logo-light.png" alt="Dos Santos Limited" width="168" height="84"></a>
+      <p>Bridging gaps between clients, regulators and local environments to unlock industrial growth and strengthen local content across Africa.</p>
+      <p class="footer__line"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Mon - Fri, 8AM - 5PM</p>
+      <div class="footer__social">
+        <!-- Replace # with the company's real page links -->
+        <a class="social-btn" href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 21v-8h2.7l.5-3.2h-3.2V7.9c0-.9.4-1.7 1.8-1.7h1.5V3.4S15.2 3.2 14 3.2c-2.6 0-4.2 1.5-4.2 4.3v2.3H7v3.2h2.8v8z" fill="currentColor" stroke="none"/></svg></a>
+        <a class="social-btn" href="#" aria-label="LinkedIn" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9h3.4v10H5zM6.7 4.2a2 2 0 110 4 2 2 0 010-4zM10.3 9h3.2v1.4c.5-.9 1.6-1.7 3.3-1.7 3.2 0 3.7 2.1 3.7 4.8V19h-3.4v-4.9c0-1.2 0-2.7-1.7-2.7s-1.9 1.3-1.9 2.6V19h-3.4z" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4>Our Services</h4>
+      <a href="services.html#engineering">Civil Works</a>
+      <a href="services.html#engineering">Electrical, Automation and Instrumentation</a>
+      <a href="services.html#engineering">Procurement and Construction</a>
+      <a href="services.html#advisory">Advisory and supply services</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Mozambique Office</h4>
+      <a class="footer__line" href="tel:+258840694502"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg> +258 84 069 4502</a>
+      <p class="footer__line"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-10a6 6 0 0112 0c0 4.5-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg> Avenida 24 de Julho, No. 882, 7º Andar, Flat D, Polana Cimento B, Maputo, Moçambique</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Ghana Office</h4>
+      <a class="footer__line" href="tel:+233545166063"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg> +233 54 516 6063</a>
+      <p class="footer__line"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-10a6 6 0 0112 0c0 4.5-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg> No. 33 Osu Badu St. Airport Residential, Greater Accra, Accra, Ghana</p>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">© <span data-year>2026</span> Dos Santos Limited. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- Back to top button (appears after scrolling down) -->
+<button class="to-top" type="button" aria-label="Back to top"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<!-- Scripts: main.js runs on every page; the pages/ file adds this page's extras -->
+<script src="js/main.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,164 @@
+IMAGE AND FILE SLOTS
+====================
+Every place a photo, logo, video or PDF goes, page by page.
+Put a file at the path shown (same name, same folder) and it appears on the site.
+If a file is missing, the site shows a neat placeholder (or the company name for logos), so nothing breaks.
+Many of these (hero pics, home logos, What we do photos) are already in your OLD images folder:
+copy your old images folder into this site first, then add the rest.
+Tip: keep photos under about 400 KB (export JPG at 80% quality, around 1600 px wide).
+
+index.html
+----------
+  [ ] images/hero pic.jpg
+  [ ] images/hero pic 2.jpg
+  [ ] images/hero-slideshow 1.jpg
+  [ ] images/hero-slideshow 4.jpg
+  [ ] images/logo_altrad.png
+  [ ] images/eni-ghana.jpg
+  [ ] images/clients/mtn.png
+  [ ] images/spie-1.png
+  [ ] images/Bonatti.jpg
+  [ ] images/Technip_fmc.webp
+  [ ] images/Gro Alliance.jpg
+  [ ] images/7-eleven.jpg
+  [ ] images/Borri_logo.jpg
+  [ ] images/clients/ropetech.png
+  [ ] images/services/civil works.jpg
+  [ ] images/services/electrical 1.jpg
+  [ ] images/services/construction.jpg
+  [ ] images/projects/selected-project-1.jpg
+  [ ] images/projects/selected-project-2.jpg
+  [ ] images/projects/selected-project-3.jpg
+  [ ] images/testimonials/company-1.png
+  [ ] images/testimonials/company-2.png
+  [ ] images/testimonials/company-3.png
+  [ ] images/testimonials/company-4.png
+
+services.html
+-------------
+  [ ] images/services/hero.jpg
+  [ ] images/services/civil-works.jpg
+  [ ] images/services/electrical-automation-and-instrumentation.jpg
+  [ ] images/services/engineering-procurement-and-construction.jpg
+  [ ] images/services/supply-chain-and-procurement-solutions.jpg
+  [ ] images/services/business-development.jpg
+  [ ] images/services/business-intelligence-and-market-research.jpg
+  [ ] images/services/regulatory-compliance.jpg
+  [ ] images/services/consulting.jpg
+  [ ] images/services/scafold.jpg
+  [x] images/g-sdb-panel.jpg
+  [ ] images/services/fumigation.jpg
+  [x] images/g-eni-team.jpg
+  [ ] images/services/fibre-optics.jpg
+  [ ] images/services/transport.jpg
+
+siemens.html
+------------
+  [ ] images/siemens/hero.jpg
+  [ ] images/siemens/switching-and-protection-devices.jpg
+  [ ] images/siemens/soft-and-motor-starters.jpg
+  [ ] images/siemens/monitoring-and-control-devices.jpg
+  [ ] images/siemens/safety-technology.jpg
+  [ ] images/siemens/position-and-safety-switches.jpg
+  [ ] images/siemens/commanding-and-signaling-devices.jpg
+  [ ] images/siemens/mcbs.jpg
+  [ ] images/siemens/rccbs.jpg
+  [ ] images/siemens/mccbs.jpg
+  [ ] images/siemens/acbs.jpg
+  [ ] images/siemens/measuring-and-monitoring-devices.jpg
+  [ ] images/siemens/switching-and-distribution-components.jpg
+  [ ] images/siemens/system-cubicles.jpg
+  [ ] images/siemens/switchgear.jpg
+  [ ] images/siemens/power-distributors-and-distribution-boards.jpg
+  [ ] images/siemens/components.jpg
+  [ ] images/siemens/primary-air-insulated-switchgear.jpg
+  [ ] images/siemens/gas-insulated-switchgear.jpg
+  [ ] images/siemens/sf6-free-blue-gis.jpg
+  [ ] images/siemens/generator-circuit-breaker-switchgear.jpg
+  [ ] images/siemens/photovoltaic.jpg
+  [ ] images/siemens/protection.jpg
+  [ ] images/siemens/automation.jpg
+  [ ] images/siemens/power-quality.jpg
+  [ ] images/siemens/smart-communication.jpg
+  [ ] images/siemens/outdoor-distribution-systems.jpg
+  [ ] images/siemens/solution-business.jpg
+  [ ] images/siemens/flow.jpg
+  [ ] images/siemens/temperature.jpg
+  [ ] images/siemens/valve-positioners.jpg
+  [ ] images/siemens/level.jpg
+  [ ] images/siemens/pressure.jpg
+  [ ] images/siemens/weighing.jpg
+  [ ] images/siemens/continuous-gas-analyzers.jpg
+  [ ] images/siemens/gas-chromatographs.jpg
+  [ ] images/siemens/software.jpg
+  [ ] images/siemens/scm-iq.jpg
+  [ ] images/siemens/store-iq.jpg
+  [ ] images/siemens/serve-iq.jpg
+  [ ] images/siemens/mobile-iq.jpg
+  [ ] images/siemens/analyzer-system-manager.jpg
+  [ ] images/siemens/aps-sam-iq.jpg
+  [ ] images/siemens/aw050.jpg
+  [ ] images/siemens/ms200-cc220.jpg
+  [ ] images/siemens/simatic-rtu30xx.jpg
+
+projects.html
+-------------
+  [x] images/g-eni-team.jpg
+  [ ] images/projects/eni-office-construction.jpg
+  [ ] images/projects/eni-chemical-berm.jpg
+  [ ] images/projects/eni-loadbank.jpg
+  [ ] images/projects/eni-containerized-room.jpg
+  [ ] images/projects/eni-motor-controller.jpg
+  [ ] images/clients/golden-towers.png
+  [ ] images/clients/rotana-hotels.png
+  [ ] images/clients/anglogold-ashanti.png
+  [ ] images/clients/cenit-energy.png
+  [ ] images/clients/diamond-cement.png
+  [ ] images/clients/cargill.png
+  [ ] images/clients/ghana-airport.png
+  [ ] images/clients/hyper-city.png
+  [ ] images/clients/appolonia-city.png
+  [ ] images/clients/mohinani-group.png
+  [ ] images/clients/totalenergies.png
+  [ ] images/clients/bua-group.png
+  [ ] images/clients/mtn.png
+  [x] images/g-plant.jpg
+  [x] images/g-sdb-panel.jpg
+  [x] images/g-wiring.jpg
+  [x] images/g-offshore.jpg
+  [ ] images/clients/eni.png
+  [ ] images/clients/spie.png
+  [ ] images/clients/halliburton.png
+  [ ] images/clients/dangote-cement.png
+  [ ] images/clients/dzata-cement.png
+  [ ] images/clients/modec.png
+  [ ] images/clients/altrad.png
+  [ ] images/clients/layher.png
+  [ ] images/clients/borri.png
+  [ ] images/clients/sparrows.png
+  [ ] images/clients/safehouse.png
+  [ ] images/clients/ab-solar-africa.png
+  [ ] images/clients/westbridge.png
+  [ ] images/clients/savoir-faire-energy.png
+  [ ] images/clients/cyphercrescent.png
+  [ ] images/clients/alliance-francaise.png
+  [ ] images/site-video.mp4
+
+about.html
+----------
+  [ ] policies/quality-policy.pdf
+  [ ] policies/health-and-safety-policy.pdf
+  [ ] policies/corporate-social-policy.pdf
+  [ ] policies/sustainability-policy.pdf
+  [ ] policies/human-rights-policy.pdf
+  [ ] policies/code-of-ethics.pdf
+  [ ] policies/code-of-conduct.pdf
+
+esg.html
+--------
+  [x] images/esg-solar.jpg
+
+contact.html
+------------
+
+[x] = file already in the images folder   [ ] = add your own file

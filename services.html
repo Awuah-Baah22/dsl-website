@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dos Santos Limited</title>
+  <meta name="description" content="Civil works, electrical, automation and instrumentation, EPC, advisory, supply and on-site support services from Dos Santos Limited in Ghana and Mozambique.">
+
+  <!-- Social sharing preview (WhatsApp, LinkedIn, Facebook) -->
+  <meta property="og:title" content="Services | Dos Santos Limited">
+  <meta property="og:description" content="Civil works, electrical, automation and instrumentation, EPC, advisory, supply and on-site support services from Dos Santos Limited in Ghana and Mozambique.">
+  <meta property="og:image" content="images/site/logo.png">
+  <meta name="theme-color" content="#192A3D">
+  <link rel="icon" href="images/site/logo-light.png">
+
+  <!-- Fonts: Inter (text) and Fira Sans (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Sans:wght@500;600;700;800&display=swap">
+
+  <!-- Styles: base -> layout -> components -> page sections -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <!-- Lets the CSS know JavaScript is on (used by the scroll animations) -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="page-services">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ================================================================
+     HEADER: logo, main menu, mobile menu button.
+     Same on every page. If you change a link, change it on all pages.
+     ================================================================ -->
+<header class="site-header" id="top">
+  <div class="container header__inner">
+    <a class="header__logo" href="index.html" aria-label="Dos Santos Limited, home">
+      <img src="images/site/logo.png" alt="Dos Santos Limited" width="132" height="66">
+    </a>
+
+    <!-- Main menu (becomes a slide-down panel on phones and tablets) -->
+    <nav class="nav" id="main-nav" aria-label="Main">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link is-active" aria-current="page" href="services.html">Services</a>
+      <a class="nav__link" href="siemens.html">Siemens</a>
+      <div class="nav__item has-dropdown">
+        <a class="nav__link" href="projects.html" aria-haspopup="true">Projects <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="nav__dropdown">
+          <a class="nav__sublink" href="projects.html#eni">ENI Ghana track record</a>
+          <a class="nav__sublink" href="projects.html#portfolio">Project portfolio</a>
+          <a class="nav__sublink" href="projects.html#gallery">Gallery</a>
+        </div>
+      </div>
+      <div class="nav__item has-dropdown">
+        <a class="nav__link" href="about.html" aria-haspopup="true">About <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="nav__dropdown">
+          <a class="nav__sublink" href="esg.html">ESG</a>
+        </div>
+      </div>
+      <a class="nav__link" href="contact.html">Contact</a>
+      <a class="btn btn--primary nav__cta" href="contact.html?book#form">Book an appointment</a>
+    </nav>
+    <a class="btn btn--primary header__cta" href="contact.html?book#form">Book an appointment</a>
+
+    <!-- Mobile menu button (shows below 1180px) -->
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================================================================
+       HERO: one full-width photo (same style as the Home hero)
+       YOUR PHOTO: images/services/hero.jpg (wide/landscape works best)
+       The illustration shows until the photo loads.
+       ================================================================ -->
+  <section class="photo-hero">
+    <div class="photo-hero__bg" aria-hidden="true">
+      <img class="photo-hero__fallback" src="images/illustrations/services-hero.svg" alt="">
+      <img data-slot src="images/services/panel-breaker-2.jpg" alt="">
+    </div>
+    <div class="photo-hero__shade" aria-hidden="true"></div>
+
+    <div class="container photo-hero__inner">
+      <div class="photo-hero__text reveal">
+        <span class="eyebrow eyebrow--orange eyebrow--line">What we do</span>
+        <h1>High-quality <span>engineering</span> services</h1>
+        <p>From foundations to control systems, and from procurement to compliance, one team delivers the full chain.</p>
+        <div class="photo-hero__chips" aria-label="Service areas">
+          <span>Civil</span><span>Electrical</span><span>Automation</span><span>EPC</span><span>Advisory</span><span>Support</span>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn--orange" href="contact.html">Consultation</a>
+          <a class="btn btn--ghost" href="#engineering">Explore services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       ENGINEERING AND CONSTRUCTION
+       Hover: card lifts, photo zooms, blue-orange line runs along the bottom.
+       Photos: images/services/
+       ================================================================ -->
+  <section class="section" id="engineering">
+    <div class="container stack">
+      <div class="section-head reveal">
+        <span class="eyebrow">Engineering and construction</span>
+        <h2>Built to last, delivered on time</h2>
+      </div>
+
+      <div class="eng-grid">
+        <a class="eng-card reveal" href="contact.html">
+          <div class="eng-card__media photo-placeholder">
+            <img data-slot src="images/services/vadym-alyekseyenko-fGUef63Ti2Q-unsplash.jpg" alt="Civil works" loading="lazy">
+            <span class="eng-card__label">Civil</span>
+          </div>
+          <div class="eng-card__body">
+            <h3>Civil Works</h3>
+            <p>Design, construction and maintenance of structural and foundation systems.</p>
+            <span class="eng-card__more">Learn more <i><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></span>
+          </div>
+        </a>
+
+        <a class="eng-card reveal" href="contact.html">
+          <div class="eng-card__media photo-placeholder">
+            <img data-slot src="images/services/electrical 1.jpg" alt="Electrical, automation and instrumentation" loading="lazy">
+            <span class="eng-card__label">Electrical</span>
+          </div>
+          <div class="eng-card__body">
+            <h3>Electrical, Automation and Instrumentation</h3>
+            <p>Power, control and precision systems for industrial operations.</p>
+            <span class="eng-card__more">Learn more <i><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></span>
+          </div>
+        </a>
+
+        <a class="eng-card reveal" href="contact.html">
+          <div class="eng-card__media photo-placeholder">
+            <img data-slot src="images/services/construction-1.jpg" alt="Engineering, procurement and construction" loading="lazy">
+            <span class="eng-card__label">EPC</span>
+          </div>
+          <div class="eng-card__body">
+            <h3>Engineering and Construction</h3>
+            <p>End to end delivery of buildings and industrial structures.</p>
+            <span class="eng-card__more">Learn more <i><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       ADVISORY AND SUPPLY ("Support around every project")
+       Fades in on scroll. Hover a card to read its description.
+       Photos: images/services/
+       ================================================================ -->
+  <section class="section section--cloud" id="advisory">
+    <div class="container stack">
+      <div class="section-head reveal">
+        <span class="eyebrow">Advisory and supply</span>
+        <h2>Support around every project</h2>
+      </div>
+
+      <div class="advisory-grid">
+        <a class="advisory-card is-big reveal" href="contact.html">
+          <div class="advisory-card__media glow-blue"><img data-slot src="images/services/supply chain.jpg" alt="" loading="lazy"></div>
+          <div class="advisory-card__shade"></div>
+          <div class="advisory-card__body">
+            <h3>Supply Chain and Procurement Solutions</h3>
+            <p class="advisory-card__text">Sourcing, logistics and compliant procurement.</p>
+            <span class="advisory-card__more">View more <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+
+        <a class="advisory-card reveal" href="contact.html">
+          <div class="advisory-card__media glow-orange"><img data-slot src="images/services/business-development.jpg" alt="" loading="lazy"></div>
+          <div class="advisory-card__shade"></div>
+          <div class="advisory-card__body">
+            <h3>Business Development</h3>
+            <p class="advisory-card__text">Opportunity identification, partnerships and market expansion.</p>
+            <span class="advisory-card__more">View more <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+
+        <a class="advisory-card reveal" href="contact.html">
+          <div class="advisory-card__media glow-teal"><img data-slot src="images/services/business-intelligence-and-market-research.jpg" alt="" loading="lazy"></div>
+          <div class="advisory-card__shade"></div>
+          <div class="advisory-card__body">
+            <h3>Business Intelligence and Market Research</h3>
+            <p class="advisory-card__text">Data-driven market analysis to guide decisions.</p>
+            <span class="advisory-card__more">View more <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+
+        <a class="advisory-card reveal" href="contact.html">
+          <div class="advisory-card__media glow-blue"><img data-slot src="images/services/regulatory-compliance.jpg" alt="" loading="lazy"></div>
+          <div class="advisory-card__shade"></div>
+          <div class="advisory-card__body">
+            <h3>Regulatory Compliance</h3>
+            <p class="advisory-card__text">Adherence to local and international standards.</p>
+            <span class="advisory-card__more">View more <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+
+        <a class="advisory-card reveal" href="contact.html">
+          <div class="advisory-card__media glow-orange"><img data-slot src="images/services/consulting (1).jpg" alt="" loading="lazy"></div>
+          <div class="advisory-card__shade"></div>
+          <div class="advisory-card__body">
+            <h3>Consulting</h3>
+            <p class="advisory-card__text">Tailored advisory services for your project.</p>
+            <span class="advisory-card__more">View more <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       SUPPORT SERVICES SLIDER
+       Arrows and dots: js/pages/services.js (dots are made automatically).
+       Maintenance and support card also shows FUMIGATION:
+         - computer: hover the card
+         - phone: tap "Includes fumigation"
+       Fumigation photo: images/services/fumigation.jpg
+       ================================================================ -->
+  <section class="section support-slider-section" id="support">
+    <div class="container stack">
+      <div class="section-head reveal">
+        <span class="eyebrow">Support services</span>
+        <h2>On-site support that keeps operations running</h2>
+        <p>Practical services that keep sites safe, staffed and productive.</p>
+      </div>
+
+      <div class="support-slider reveal">
+        <div class="support-slider__track" tabindex="0" aria-label="Support services, scroll sideways">
+
+          <!-- Scaffolding -->
+          <article class="support-card">
+            <div class="support-card__media photo-placeholder"><img data-slot src="images/services/scafold.jpg" alt="Scaffolding" loading="lazy"></div>
+            <div class="support-card__shade"></div>
+            <div class="support-card__body">
+              <h3>Scaffolding</h3>
+              <p>Drawings and designs, load calculations, supply and procurement, installation, dismantling, inspection and manpower.</p>
+            </div>
+          </article>
+
+          <!-- Maintenance and support (with Fumigation inside) -->
+          <article class="support-card support-card--combo">
+            <!-- Layer 1: Maintenance and support -->
+            <div class="support-card__layer">
+              <div class="support-card__media photo-placeholder"><img data-slot src="images/services/hero-option-1.jpg" alt="Maintenance and support" loading="lazy"></div>
+              <div class="support-card__shade"></div>
+              <div class="support-card__body">
+                <h3>Maintenance and support</h3>
+                <p>Troubleshooting, spares procurement, corrosion control, repair and refurbishment, painting, welding and civil works.</p>
+              </div>
+            </div>
+            <!-- Layer 2: Fumigation (wipes in on hover / tap) -->
+            <div class="support-card__layer support-card__layer--fumigation">
+              <div class="support-card__media photo-placeholder"><img data-slot src="images/services/fumigation -2.jpg" alt="Fumigation" loading="lazy"></div>
+              <div class="support-card__shade"></div>
+              <div class="support-card__body">
+                <span class="eyebrow">Part of maintenance and support</span>
+                <h3>Fumigation</h3>
+                <p>Pest and reptile control that keeps offices, warehouses and site facilities safe and hygienic.</p>
+              </div>
+            </div>
+            <button class="support-card__hint" type="button" aria-pressed="false"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8a4 4 0 018 0v6a4 4 0 01-8 0zM12 8v10M4 10h4M16 10h4M4 16h4M16 16h4M9 4l1.5 2M15 4l-1.5 2"/></svg> Includes fumigation</button>
+          </article>
+
+          <!-- Manpower -->
+          <article class="support-card">
+            <div class="support-card__media photo-placeholder"><img data-slot src="images/services/manpower.jpg" alt="Manpower" loading="lazy"></div>
+            <div class="support-card__shade"></div>
+            <div class="support-card__body">
+              <h3>Manpower</h3>
+              <p>Local, expatriate and community personnel, technicians and engineers.</p>
+            </div>
+          </article>
+
+          <!-- Fibre optics -->
+          <article class="support-card">
+            <div class="support-card__media photo-placeholder"><img data-slot src="images/services/fibre-optics.jpg" alt="Fibre optics" loading="lazy"></div>
+            <div class="support-card__shade"></div>
+            <div class="support-card__body">
+              <h3>Fibre optics</h3>
+              <p>Troubleshooting, repair, testing and commissioning.</p>
+            </div>
+          </article>
+
+          <!-- Transport -->
+          <article class="support-card">
+            <div class="support-card__media photo-placeholder"><img data-slot src="images/services/toyota-hiace.webp" alt="Transport" loading="lazy"></div>
+            <div class="support-card__shade"></div>
+            <div class="support-card__body">
+              <h3>Transport</h3>
+              <p>Vehicle rentals, electric vehicles (EVs) and related infrastructure.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="support-slider__controls">
+          <button class="slider-arrow" type="button" data-slide="prev" aria-label="Previous service"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+          <div class="slider-dots"></div>
+          <button class="slider-arrow" type="button" data-slide="next" aria-label="Next service"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       SIEMENS PARTNER BAND
+       ================================================================ -->
+  <section class="section section--cloud">
+    <div class="container">
+      <div class="partner-band reveal">
+        <div class="partner-band__text">
+          <span class="eyebrow">Siemens Authorized Partner</span>
+          <h2>Authorized Siemens LV, MV and process automation solutions partner</h2>
+          <p>We supply Siemens protection devices, switchgear and automation products, and support them from design through commissioning and maintenance.</p>
+        </div>
+        <a class="btn btn--siemens" href="siemens.html">Explore Siemens solutions <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       CALL TO ACTION
+       ================================================================ -->
+  <section class="cta-band cta-band--blue">
+    <div class="container cta-band__inner">
+      <div class="cta-band__text reveal">
+        <h2>Ready to talk about your project?</h2>
+        <p>Speak to our team in Accra or Maputo and book a consultation.</p>
+      </div>
+      <div class="btn-row reveal">
+        <a class="btn btn--white" href="contact.html?book#form">Book an appointment</a>
+        <a class="btn btn--ghost" href="contact.html">Consultation</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- ================================================================
+     FOOTER: company summary, services, office addresses.
+     Same on every page.
+     ================================================================ -->
+<footer class="site-footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="index.html" aria-label="Dos Santos Limited, home"><img src="images/site/logo-light.png" alt="Dos Santos Limited" width="168" height="84"></a>
+      <p>Bridging gaps between clients, regulators and local environments to unlock industrial growth and strengthen local content across Africa.</p>
+      <p class="footer__line"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Mon - Fri, 8AM - 5PM</p>
+      <div class="footer__social">
+        <!-- Replace # with the company's real page links -->
+        <a class="social-btn" href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 21v-8h2.7l.5-3.2h-3.2V7.9c0-.9.4-1.7 1.8-1.7h1.5V3.4S15.2 3.2 14 3.2c-2.6 0-4.2 1.5-4.2 4.3v2.3H7v3.2h2.8v8z" fill="currentColor" stroke="none"/></svg></a>
+        <a class="social-btn" href="#" aria-label="LinkedIn" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9h3.4v10H5zM6.7 4.2a2 2 0 110 4 2 2 0 010-4zM10.3 9h3.2v1.4c.5-.9 1.6-1.7 3.3-1.7 3.2 0 3.7 2.1 3.7 4.8V19h-3.4v-4.9c0-1.2 0-2.7-1.7-2.7s-1.9 1.3-1.9 2.6V19h-3.4z" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4>Our Services</h4>
+      <a href="services.html#engineering">Civil Works</a>
+      <a href="services.html#engineering">Electrical, Automation and Instrumentation</a>
+      <a href="services.html#engineering">Procurement and Construction</a>
+      <a href="services.html#advisory">Advisory and supply services</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Mozambique Office</h4>
+      <a class="footer__line" href="tel:+258840694502"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg> +258 84 069 4502</a>
+      <p class="footer__line"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-10a6 6 0 0112 0c0 4.5-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg> Avenida 24 de Julho, No. 882, 7º Andar, Flat D, Polana Cimento B, Maputo, Moçambique</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Ghana Office</h4>
+      <a class="footer__line" href="tel:+233545166063"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg> +233 54 516 6063</a>
+      <p class="footer__line"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-10a6 6 0 0112 0c0 4.5-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg> No. 33 Osu Badu St. Airport Residential, Greater Accra, Accra, Ghana</p>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">© <span data-year>2026</span> Dos Santos Limited. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- Back to top button (appears after scrolling down) -->
+<button class="to-top" type="button" aria-label="Back to top"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<!-- Scripts: main.js runs on every page; the pages/ file adds this page's extras -->
+<script src="js/main.js" defer></script>
+<script src="js/pages/services.js" defer></script>
+</body>
+</html>
+

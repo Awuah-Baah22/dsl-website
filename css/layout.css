@@ -1,0 +1,231 @@
+/* =====================================================================
+   LAYOUT.CSS
+   Parts that appear on every page:
+     1. Header and main menu
+     2. Dropdown menus
+     3. Mobile menu (below 1180px)
+     4. Footer
+     5. Back-to-top button
+   ===================================================================== */
+
+
+/* ---------------------------------------------------------------------
+   1. HEADER AND MAIN MENU
+   --------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+  transition: box-shadow .25s;
+}
+.site-header.is-scrolled { box-shadow: 0 8px 24px rgba(25, 42, 61, .1); }
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  min-height: 88px;
+}
+.header__logo img { height: 66px; width: auto; }
+
+.nav { display: flex; align-items: center; gap: 4px; }
+.nav__link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font: 500 15px/1 var(--font-body);
+  color: var(--navy);
+  text-decoration: none;
+  transition: color .15s, background-color .15s;
+}
+.nav__link:hover { color: var(--blue); background: var(--cloud); }
+.nav__link.is-active { color: var(--blue); }
+.nav__link.is-active::after {          /* blue line under the current page */
+  content: "";
+  position: absolute;
+  left: 14px; right: 14px; bottom: -2px;
+  height: 2px;
+  background: var(--blue);
+}
+.nav__cta { display: none; }            /* only shown inside the mobile menu */
+
+
+/* ---------------------------------------------------------------------
+   2. DROPDOWN MENUS (Projects, About)
+   --------------------------------------------------------------------- */
+.nav__item { position: relative; }
+.nav__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  padding: 8px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity .2s, transform .2s, visibility .2s;
+}
+.has-dropdown:hover .nav__dropdown,
+.has-dropdown:focus-within .nav__dropdown,
+.has-dropdown.is-open .nav__dropdown { opacity: 1; visibility: visible; transform: none; }
+
+.nav__sublink {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  color: var(--navy);
+  text-decoration: none;
+}
+.nav__sublink:hover { background: var(--cloud); color: var(--blue); }
+
+
+/* ---------------------------------------------------------------------
+   3. MOBILE MENU (tablets and phones)
+   --------------------------------------------------------------------- */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--navy);
+  transition: transform .3s, opacity .2s;
+}
+.menu-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-open .nav-toggle span:nth-child(2) { opacity: 0; }
+.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 1180px) {
+  .header__inner { min-height: 76px; gap: 16px; }
+  .header__logo img { height: 54px; }
+  .header__cta { margin-left: auto; }
+  .nav-toggle { display: inline-flex; }
+
+  /* The menu becomes a full-height panel under the header */
+  .nav {
+    display: none;
+    position: fixed;
+    left: 0; right: 0;
+    top: var(--header-h);
+    bottom: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    padding: 16px var(--gutter) 32px;
+    background: var(--white);
+    border-top: 1px solid var(--line);
+    overflow-y: auto;
+  }
+  .menu-open .nav { display: flex; animation: menu-in .25s ease; }
+  @keyframes menu-in { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+
+  .nav__link { padding: 16px 14px; font-size: 17px; }
+  .nav__link.is-active { background: var(--cloud); }
+  .nav__link.is-active::after { left: 0; right: auto; top: 10px; bottom: 10px; width: 3px; height: auto; }
+  .nav__link .icon { display: none; }
+
+  /* Sub-links are always shown, indented */
+  .nav__dropdown {
+    position: static;
+    opacity: 1; visibility: visible; transform: none;
+    padding: 0 0 6px 14px;
+    border: 0;
+    box-shadow: none;
+    min-width: 0;
+  }
+  .nav__sublink { border-left: 2px solid var(--line); border-radius: 0; color: var(--text-soft); }
+  .nav__cta { display: inline-flex; margin-top: 16px; min-height: 54px; }
+}
+@media (max-width: 600px) {
+  .header__cta { display: none; }
+}
+@media (max-width: 380px) {
+  .header__logo img { height: 46px; }
+  .nav-toggle { width: 44px; height: 44px; }
+}
+
+
+/* ---------------------------------------------------------------------
+   4. FOOTER
+   --------------------------------------------------------------------- */
+.site-footer { background: var(--navy); color: #C9D4E0; font-size: 15px; }
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1.1fr 1.1fr;
+  gap: 48px 56px;
+  padding-top: 72px;
+  padding-bottom: 56px;
+}
+.footer__brand { display: flex; flex-direction: column; gap: 20px; }
+.footer__brand img { height: 84px; width: auto; }
+.footer__brand p { line-height: 1.7; max-width: 320px; }
+.footer__col { display: flex; flex-direction: column; gap: 14px; }
+.footer__col h4 { color: var(--white); font-size: 17px; margin-bottom: 6px; }
+.footer__col a, .footer__line { color: #C9D4E0; text-decoration: none; line-height: 1.6; }
+.footer__col a:hover { color: var(--white); }
+.footer__line { display: flex; gap: 12px; align-items: flex-start; }
+.footer__line .icon { color: var(--orange); margin-top: 3px; }
+.footer__social { display: flex; gap: 10px; }
+.social-btn {
+  width: 40px; height: 40px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, .25);
+  color: var(--white);
+  transition: background-color .2s, border-color .2s;
+}
+.social-btn:hover { background: var(--orange); border-color: var(--orange); }
+.footer__bottom { border-top: 1px solid rgba(255, 255, 255, .14); padding: 22px 0; text-align: center; font-size: 13px; }
+
+@media (max-width: 1024px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px)  { .footer__grid { grid-template-columns: 1fr; gap: 36px; padding-top: 56px; } }
+
+
+/* ---------------------------------------------------------------------
+   5. BACK-TO-TOP BUTTON
+   --------------------------------------------------------------------- */
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 90;
+  width: 50px; height: 50px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--white);
+  box-shadow: 0 10px 26px rgba(25, 42, 61, .3);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  transition: opacity .3s, transform .3s, background-color .2s;
+}
+.to-top.is-visible { opacity: 1; transform: none; pointer-events: auto; }
+.to-top:hover { background: var(--orange); color: var(--navy); }
+@media (max-width: 600px) { .to-top { right: 14px; bottom: 14px; width: 46px; height: 46px; } }

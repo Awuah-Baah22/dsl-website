@@ -1,0 +1,17 @@
+<svg preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300"><style>
+.sweep{transform-origin:350px 150px;animation:spin 5s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.pr{transform-origin:350px 150px;animation:pring 3.2s ease-out infinite;opacity:0}
+.pr.b{animation-delay:1.6s}
+@keyframes pring{0%{transform:scale(.3);opacity:.9}100%{transform:scale(2.6);opacity:0}}
+.dpath{stroke-dasharray:420;stroke-dashoffset:420;animation:draw 4.5s ease-in-out infinite}
+@keyframes draw{0%{stroke-dashoffset:420}55%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:0;opacity:0}}
+.sun{transform-origin:350px 225px;animation:sunr 6s ease-in-out infinite alternate}
+@keyframes sunr{from{transform:translateY(22px)}to{transform:translateY(-8px)}}
+.halo{transform-origin:350px 225px;animation:halo 4s ease-in-out infinite}
+@keyframes halo{0%,100%{transform:scale(1);opacity:.25}50%{transform:scale(1.18);opacity:.45}}
+.win{animation:tw 3s ease-in-out infinite}
+@keyframes tw{0%,100%{fill-opacity:.25}50%{fill-opacity:.95}}
+.orbit{transform-origin:350px 250px;animation:spin 16s linear infinite}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.dpath{stroke-dashoffset:0}.pr{opacity:.3}}
+</style><defs><radialGradient id="sw" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(350 150) scale(220)"><stop offset="0" stop-color="#1559ED" stop-opacity=".0"/><stop offset="1" stop-color="#1559ED" stop-opacity=".55"/></radialGradient></defs><circle cx="350" cy="150" r="50" fill="none" stroke="#fff" stroke-opacity="0.19" stroke-width="1.5"/><circle cx="350" cy="150" r="100" fill="none" stroke="#fff" stroke-opacity="0.16" stroke-width="1.5"/><circle cx="350" cy="150" r="150" fill="none" stroke="#fff" stroke-opacity="0.13" stroke-width="1.5"/><circle cx="350" cy="150" r="200" fill="none" stroke="#fff" stroke-opacity="0.10" stroke-width="1.5"/><circle cx="350" cy="150" r="250" fill="none" stroke="#fff" stroke-opacity="0.06" stroke-width="1.5"/><line x1="350" y1="0" x2="350" y2="300" stroke="#fff" stroke-opacity=".12"/><line x1="0" y1="150" x2="700" y2="150" stroke="#fff" stroke-opacity=".12"/><g class="sweep"><path d="M350 150 L350 -80 A230 230 0 0 1 549 35 Z" fill="url(#sw)"/><line x1="350" y1="150" x2="350" y2="-80" stroke="#5B8CFF" stroke-width="2"/></g><circle class="pr" cx="350" cy="150" r="30" fill="none" stroke="#E8801A" stroke-width="2"/><circle class="pr b" cx="350" cy="150" r="30" fill="none" stroke="#E8801A" stroke-width="2"/><polyline class="dpath" points="90,270 190,235 260,200 315,172 350,150" fill="none" stroke="#E8801A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="350" cy="150" r="12" fill="#E8801A"/><circle cx="350" cy="150" r="5" fill="#fff"/></svg>

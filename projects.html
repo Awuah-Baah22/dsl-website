@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dos Santos Limited</title>
+  <meta name="description" content="Projects delivered by Dos Santos Limited across energy, industry and infrastructure, including a continuous track record with ENI Ghana at ORF Sanzule.">
+
+  <!-- Social sharing preview (WhatsApp, LinkedIn, Facebook) -->
+  <meta property="og:title" content="Projects | Dos Santos Limited">
+  <meta property="og:description" content="Projects delivered by Dos Santos Limited across energy, industry and infrastructure, including a continuous track record with ENI Ghana at ORF Sanzule.">
+  <meta property="og:image" content="images/site/logo.png">
+  <meta name="theme-color" content="#192A3D">
+  <link rel="icon" href="images/site/logo-light.png">
+
+  <!-- Fonts: Inter (text) and Fira Sans (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Sans:wght@500;600;700;800&display=swap">
+
+  <!-- Styles: base -> layout -> components -> page sections -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <!-- Lets the CSS know JavaScript is on (used by the scroll animations) -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="page-projects">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ================================================================
+     HEADER: logo, main menu, mobile menu button.
+     Same on every page. If you change a link, change it on all pages.
+     ================================================================ -->
+<header class="site-header" id="top">
+  <div class="container header__inner">
+    <a class="header__logo" href="index.html" aria-label="Dos Santos Limited, home">
+      <img src="images/site/logo.png" alt="Dos Santos Limited" width="132" height="66">
+    </a>
+
+    <!-- Main menu (becomes a slide-down panel on phones and tablets) -->
+    <nav class="nav" id="main-nav" aria-label="Main">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="services.html">Services</a>
+      <a class="nav__link" href="siemens.html">Siemens</a>
+      <div class="nav__item has-dropdown">
+        <a class="nav__link is-active" href="projects.html" aria-haspopup="true">Projects <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="nav__dropdown">
+          <a class="nav__sublink" href="projects.html#eni">ENI Ghana track record</a>
+          <a class="nav__sublink" href="projects.html#portfolio">Project portfolio</a>
+          <a class="nav__sublink" href="projects.html#gallery">Gallery</a>
+        </div>
+      </div>
+      <div class="nav__item has-dropdown">
+        <a class="nav__link" href="about.html" aria-haspopup="true">About <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="nav__dropdown">
+          <a class="nav__sublink" href="esg.html">ESG</a>
+        </div>
+      </div>
+      <a class="nav__link" href="contact.html">Contact</a>
+      <a class="btn btn--primary nav__cta" href="contact.html?book#form">Book an appointment</a>
+    </nav>
+    <a class="btn btn--primary header__cta" href="contact.html?book#form">Book an appointment</a>
+
+    <!-- Mobile menu button (shows below 1180px) -->
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================================================================
+       HERO (background photo: images/g-eni-team.jpg)
+       ================================================================ -->
+  <section class="page-hero page-hero--stats">
+    <div class="page-hero__bg photo-placeholder" aria-hidden="true">
+      <img data-slot src="images/projects/g-eni-team.jpg" alt="">
+    </div>
+    <div class="page-hero__shade" aria-hidden="true"></div>
+    <div class="container page-hero__inner page-hero__inner--single">
+      <div class="page-hero__text reveal">
+        <span class="eyebrow eyebrow--orange eyebrow--line">Track record</span>
+        <h1>Projects delivered across energy, industry and infrastructure</h1>
+        <p class="page-hero__lead">From the ENI Ghana Onshore Gas Receiving Facility to power plants, cement works, solar farms and EV charging, our teams deliver electrical, civil and automation scope for leading organizations in Ghana and across the region.</p>
+        <div class="btn-row">
+          <a class="btn btn--orange" href="#portfolio">View the portfolio <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       STATS (same block as the Home page)
+       ================================================================ -->
+  <section>
+    <div class="container">
+      <!-- Same numbers on Home and Projects: if you change one, change both. data-count = the number it counts up to -->
+      <div class="stats stats--overlap reveal">
+        <div class="stat">
+          <span class="stat__icon"><svg class="icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 4.5-9 4.5-9-4.5zM3 12l9 4.5 9-4.5M3 16.5l9 4.5 9-4.5"/></svg></span>
+          <span class="stat__number"><span data-count="47">47</span>+</span>
+          <span class="stat__label">Projects</span>
+        </div>
+        <div class="stat">
+          <span class="stat__icon"><svg class="icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M16 5.5a3 3 0 010 5.5M18 14.5c2 .7 3 2.5 3 5.5"/></svg></span>
+          <span class="stat__number"><span data-count="35">35</span>+</span>
+          <span class="stat__label">Clients</span>
+        </div>
+        <div class="stat">
+          <span class="stat__icon"><svg class="icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M6 16l4-5 3 3 5-7"/></svg></span>
+          <span class="stat__number"><span data-count="79">79</span>+</span>
+          <span class="stat__label">Consultations</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       ENI GHANA TRACK RECORD
+       Photos: images/projects/eni-*.jpg
+       Until a photo is added, the card shows its illustration (data-fallback).
+       ================================================================ -->
+  <section class="section" id="eni">
+    <div class="container stack">
+      <div class="eni__head">
+        <div class="section-head section-head--left reveal">
+          <span class="eyebrow">Featured client</span>
+          <h2>Our track record with ENI Ghana E&amp;P</h2>
+          <p>A trusted, repeat contractor at the Onshore Gas Receiving Facility (ORF), Sanzule.</p>
+        </div>
+      </div>
+
+      <div class="eni__facts">
+        <div class="eni__fact reveal"><span><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><div><strong>Since 2019</strong><small>Continuous engagement</small></div></div>
+        <div class="eni__fact reveal"><span><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><strong>12+ assignments</strong><small>Completed for ENI Ghana E&amp;P</small></div></div>
+        <div class="eni__fact reveal"><span><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M16 5.5a3 3 0 010 5.5M18 14.5c2 .7 3 2.5 3 5.5"/></svg></span><div><strong>Sub-contractor</strong><small>To SPIE Global Services Energy</small></div></div>
+      </div>
+
+      <div class="work-grid">
+        <article class="work-card reveal">
+          <div class="work-card__media">
+            <img data-slot src="images/projects/eni-office-construction.jpg" data-fallback="images/illustrations/eni-office-construction.svg" alt="Office construction" loading="lazy">
+            <span class="work-card__year">2020&ndash;2021</span>
+          </div>
+          <div class="work-card__body">
+            <h3>Office construction</h3>
+            <p>Air-conditioned, furnished warehouse offices delivered as one multi-discipline EPC scope.</p>
+            <div class="tags"><span class="tag">Civil works</span><span class="tag">Electrical</span><span class="tag">HVAC</span></div>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-card__media">
+            <img data-slot src="images/projects/eni-chemical-berm.jpg" data-fallback="images/illustrations/eni-chemical-berm.svg" alt="Chemical berm and sump" loading="lazy">
+            <span class="work-card__year">2021</span>
+          </div>
+          <div class="work-card__body">
+            <h3>Chemical berm and sump</h3>
+            <p>Roofed chemical berm, fully covered sump with pipe connection, and 2 accessibility ramps.</p>
+            <div class="tags"><span class="tag">Civil works</span></div>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-card__media">
+            <img data-slot src="images/projects/eni-loadbank.jpg" data-fallback="images/illustrations/eni-loadbank.svg" alt="Loadbank testing" loading="lazy">
+            <span class="work-card__year">2023</span>
+          </div>
+          <div class="work-card__body">
+            <h3>Loadbank</h3>
+            <p>Testing and commissioning, firmware updates, and ENMS changes for the new Emergency Diesel Generator.</p>
+            <div class="tags"><span class="tag">Electrical</span><span class="tag">Commissioning</span></div>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-card__media">
+            <img data-slot src="images/projects/eni-containerized-room.jpg" data-fallback="images/illustrations/eni-containerized-room.svg" alt="Containerized room" loading="lazy">
+            <span class="work-card__year">2024</span>
+          </div>
+          <div class="work-card__body">
+            <h3>Containerized room</h3>
+            <p>Design, fabrication and installation of a fully fitted, air-conditioned 40ft container office/storage room.</p>
+            <div class="tags"><span class="tag">Civil works</span><span class="tag">Fabrication</span></div>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-card__media">
+            <img data-slot src="images/projects/eni-motor-controller.jpg" data-fallback="images/illustrations/eni-motor-controller.svg" alt="Motor controller and SCADA" loading="lazy">
+            <span class="work-card__year">2024</span>
+          </div>
+          <div class="work-card__body">
+            <h3>Motor controller / SCADA</h3>
+            <p>Motor controller works, SCADA/ENMS configuration and maintenance of the electrical and control systems.</p>
+            <div class="tags"><span class="tag">Electrical</span><span class="tag">SCADA</span><span class="tag">Maintenance</span></div>
+          </div>
+        </article>
+
+        <a class="work-card work-card--more reveal" href="#portfolio">
+          <div>
+            <span class="eyebrow eyebrow--orange">Beyond ENI</span>
+            <h3>Power plants, cement works, solar farms and EV charging</h3>
+            <p>See the organizations we have delivered for across the region.</p>
+          </div>
+          <span class="link-arrow">View the full portfolio <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       PROJECT PORTFOLIO: client companies and their logos only
+       Logos: images/clients/<company-name>.png (e.g. cenit-energy.png)
+       To add a company: copy one client-card block.
+       ================================================================ -->
+  <section class="section section--dark portfolio" id="portfolio">
+    <div class="container stack">
+      <div class="section-head reveal">
+        <span class="eyebrow eyebrow--orange">Project portfolio</span>
+        <h2>Organizations we have delivered for</h2>
+        <p>Energy, industrial and infrastructure clients across Ghana and the region.</p>
+      </div>
+      <div class="client-grid">
+        <div class="client-card reveal">
+          <div class="client-card__logo"><img data-slot src="images/projects/golden.webp" alt="Golden Towers logo" loading="lazy"></div>
+          <p class="client-card__name">Golden Towers</p>
+        </div>
+        <div class="client-card reveal">
+          <div class="client-card__logo"><img data-slot src="images/projects/rotana.webp" alt="Rotana Hotels logo" loading="lazy"></div>
+          <p class="client-card__name">Rotana Hotels</p>
+        </div>
+        <div class="client-card reveal">
+          <div class="client-card__logo"><img data-slot src="images/projects/gold.webp" alt="AngloGold Ashanti logo" loading="lazy"></div>
+          <p class="client-card__name">AngloGold Ashanti</p>
+        </div>
+        <div class="client-card reveal">
+          <div class="client-card__logo"><img data-slot src="images/clients/cenit-energy.png" alt="Cenit Energy logo" loading="lazy"></div>
+          <p class="client-card__name">Cenit Energy</p>
+        </div>
+        <div class="client-card reveal">
+          <div class="client-card__logo"><img data-slot src="images/projects/diamond.webp" alt="Diamond Cement logo" loading="lazy"></div>
+          <p class="client-card__name">Diamond Cement</p>
+        </div>
+        <div class="client-card reveal">
+          <div class="client-card__logo"><img data-slot src="images/projects/cargill.webp" alt="Cargill logo" loading="lazy"></div>
+          <p class="client-card__name">Cargill</p>
+        </div>
+        <div class="client-card reveal">
+          <div class="client-card__logo"><img data-slot src="images/projects/airport.webp" alt="Ghana Airport logo" loading="lazy"></div>
+          <p class="client-card__name">Ghana Airport</p>
+        </div>
+        <div class="client-card reveal">
+          <div class="client-card__logo"><img data-slot src="images/projects/hyper-city.webp" alt="Hyper City logo" loading="lazy"></div>
+          <p class="client-card__name">Hyper City</p>
+        </div>
+        <div class="client-card reveal">
+          <div class="client-card__logo"><img data-slot src="images/projects/appolonia.png" alt="Appolonia City logo" loading="lazy"></div>
+          <p class="client-card__name">Appolonia City</p>
+        </div>
+        <div class="client-card reveal">
+          <div class="client-card__logo"><img data-slot src="images/projects/mohinani.webp" alt="Mohinani Group logo" loading="lazy"></div>
+          <p class="client-card__name">Mohinani Group</p>
+        </div>
+        <div class="client-card reveal">
+          <div class="client-card__logo"><img data-slot src="images/projects/total.webp" alt="TotalEnergies logo" loading="lazy"></div>
+          <p class="client-card__name">TotalEnergies</p>
+        </div>
+        <div class="client-card reveal">
+          <div class="client-card__logo"><img data-slot src="images/projects/Bua.webp" alt="Bua Group logo" loading="lazy"></div>
+          <p class="client-card__name">Bua Group</p>
+        </div>
+        <div class="client-card reveal">
+          <div class="client-card__logo"><img data-slot src="images/projects/mtn.png" alt="MTN logo" loading="lazy"></div>
+          <p class="client-card__name">MTN</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       GALLERY
+       Big viewer + thumbnails (js/pages/projects.js).
+       To add a photo: copy one <button class="gallery__thumb"> and change
+       data-src, data-cat, data-title and data-caption (and the <img> src).
+       Video: add data-video="images/site-video.mp4".
+       ================================================================ -->
+  <section class="section section--cloud" id="gallery">
+    <div class="container stack">
+      <div class="section-head reveal">
+        <span class="eyebrow">Gallery</span>
+        <h2>Our work in pictures</h2>
+        <p>Our teams and installations in the field. Browse the photos below, or open any one full screen.</p>
+      </div>
+
+      <div class="gallery reveal">
+        <div class="gallery__stage">
+          <img class="gallery__image" src="images/g-eni-team.jpg" alt="">
+          <div class="gallery__shade"></div>
+          <div class="gallery__caption">
+            <span class="gallery__cat"></span>
+            <h3></h3>
+            <p></p>
+          </div>
+          <span class="gallery__count"></span>
+          <button class="gallery__arrow gallery__arrow--prev" type="button" data-gallery="prev" aria-label="Previous photo"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+          <button class="gallery__arrow gallery__arrow--next" type="button" data-gallery="next" aria-label="Next photo"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <button class="gallery__full" type="button" aria-label="View full screen"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg> Full screen</button>
+          <button class="gallery__play-big" type="button" aria-label="Play video" hidden><svg class="icon" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor" stroke="none"/></svg></button>
+          <video class="gallery__video" playsinline controls preload="none" hidden></video>
+          <div class="gallery__note" hidden>Video file not added yet. Place it at <code>images/site-video.mp4</code>.</div>
+          <div class="gallery__timer" aria-hidden="true"><span></span></div>
+        </div>
+
+        <div class="gallery__thumbs">
+          <button class="gallery__thumb is-active" type="button" data-src="images/g-eni-team.jpg" data-cat="Our teams" data-title="ENI Ghana E&amp;P, ORF Sanzule" data-caption="DSL site team at the Onshore Gas Receiving Facility" aria-label="Show ENI Ghana E&amp;P, ORF Sanzule"><img src="images/g-eni-team.jpg" alt="" loading="lazy"></button>
+          <button class="gallery__thumb" type="button" data-src="images/g-plant.jpg" data-cat="Video" data-title="DSL at work" data-caption="[YOUR VIDEO: a short 15 to 30 second clip of the team on site]" data-video="images/site-video.mp4" aria-label="Show DSL at work"><img src="images/g-plant.jpg" alt="" loading="lazy"><span class="gallery__play"><svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor" stroke="none"/></svg></span></button>
+          <button class="gallery__thumb" type="button" data-src="images/g-sdb-panel.jpg" data-cat="Electrical" data-title="Distribution board" data-caption="Electrical installation and commissioning" aria-label="Show Distribution board"><img src="images/g-sdb-panel.jpg" alt="" loading="lazy"></button>
+          <button class="gallery__thumb" type="button" data-src="images/g-wiring.jpg" data-cat="Electrical" data-title="Panel wiring" data-caption="LV protection devices and control wiring" aria-label="Show Panel wiring"><img src="images/g-wiring.jpg" alt="" loading="lazy"></button>
+          <button class="gallery__thumb" type="button" data-src="images/g-offshore.jpg" data-cat="Support services" data-title="Work at height" data-caption="Scaffolding and access services" aria-label="Show Work at height"><img src="images/g-offshore.jpg" alt="" loading="lazy"></button>
+          <button class="gallery__thumb" type="button" data-src="images/g-plant.jpg" data-cat="Energy and industrial" data-title="Energy and industrial" data-caption="Power generation facilities" aria-label="Show Energy and industrial"><img src="images/g-plant.jpg" alt="" loading="lazy"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full screen photo viewer (opened from the gallery) -->
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <button class="lightbox__btn lightbox__close" type="button" aria-label="Close"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <button class="lightbox__btn lightbox__prev" type="button" aria-label="Previous photo"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+    <figure>
+      <img src="" alt="">
+      <figcaption><strong></strong><span></span></figcaption>
+    </figure>
+    <button class="lightbox__btn lightbox__next" type="button" aria-label="Next photo"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </div>
+
+
+  <!-- ================================================================
+       OUR NETWORK: two moving logo strips (second one moves the other way)
+       Logos: images/clients/<company-name>.png
+       ================================================================ -->
+  <section class="section" id="clients">
+    <div class="container stack">
+      <div class="section-head reveal">
+        <span class="eyebrow">Our network</span>
+        <h2>Trusted by leading organizations</h2>
+        <p>Organizations and clients DSL has had the privilege of working with.</p>
+      </div>
+      <div>
+        <div class="logo-strip" aria-label="Clients and partners, row 1">
+          <div class="logo-strip__track">
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/eni-ghana.jpg" alt="ENI" loading="lazy"><span>ENI</span></div>
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/spie-1.png" alt="SPIE" loading="lazy"><span>SPIE</span></div>
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/projects/total.webp" alt="TotalEnergies" loading="lazy"><span>TotalEnergies</span></div>
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/projects/mtn.png" alt="MTN" loading="lazy"><span>MTN</span></div>
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/halliburton.png" alt="Halliburton" loading="lazy"><span>Halliburton</span></div>
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/projects/gold.webp" alt="AngloGold Ashanti" loading="lazy"><span>AngloGold Ashanti</span></div>
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/projects/cargill.webp" alt="Cargill" loading="lazy"><span>Cargill</span></div>
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/projects/dangote-cement.webp" alt="Dangote Cement" loading="lazy"><span>Dangote Cement</span></div>
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/projects/diamond.webp" alt="Diamond Cement" loading="lazy"><span>Diamond Cement</span></div>
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/dzata-cement.png" alt="Dzata Cement" loading="lazy"><span>Dzata Cement</span></div>
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/cenit-energy.png" alt="Cenit Energy" loading="lazy"><span>Cenit Energy</span></div>
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/modec.png" alt="MODEC" loading="lazy"><span>MODEC</span></div>
+          </div>
+        </div>
+        <div class="logo-strip" data-direction="right" aria-label="Clients and partners, row 2">
+          <div class="logo-strip__track">
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/logo_altrad.png" alt="Altrad" loading="lazy"><span>Altrad</span></div>
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/layher.png" alt="Layher" loading="lazy"><span>Layher</span></div>
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/Borri_logo.jpg" alt="Borri" loading="lazy"><span>Borri</span></div>
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/sparrows.png" alt="Sparrows" loading="lazy"><span>Sparrows</span></div>
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/ab-solar-africa.png" alt="AB Solar Africa" loading="lazy"><span>AB Solar Africa</span></div>
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/hyper-city.png" alt="Hyper City" loading="lazy"><span>Hyper City</span></div>
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/projects/appolonia.png" alt="Appolonia City" loading="lazy"><span>Appolonia City</span></div>
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/westbridge.png" alt="Westbridge" loading="lazy"><span>Westbridge</span></div>
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/savoir-faire-energy.png" alt="Savoir-Faire Energy" loading="lazy"><span>Savoir-Faire Energy</span></div>
+            <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/cyphercrescent.png" alt="CypherCrescent" loading="lazy"><span>CypherCrescent</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       CALL TO ACTION
+       ================================================================ -->
+  <section class="cta-band">
+    <div class="container cta-band__inner">
+      <div class="cta-band__text reveal">
+        <span class="eyebrow eyebrow--orange">Start a project</span>
+        <h2>Planning a project in Ghana or Mozambique?</h2>
+        <p>Talk to our team about electrical, civil, automation and support services, or Siemens LV/MV supply.</p>
+      </div>
+      <div class="btn-row reveal">
+        <a class="btn btn--orange" href="contact.html">Contact us <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn--ghost" href="siemens.html">Siemens solutions</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- ================================================================
+     FOOTER: company summary, services, office addresses.
+     Same on every page.
+     ================================================================ -->
+<footer class="site-footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="index.html" aria-label="Dos Santos Limited, home"><img src="images/site/logo-light.png" alt="Dos Santos Limited" width="168" height="84"></a>
+      <p>Bridging gaps between clients, regulators and local environments to unlock industrial growth and strengthen local content across Africa.</p>
+      <p class="footer__line"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Mon - Fri, 8AM - 5PM</p>
+      <div class="footer__social">
+        <!-- Replace # with the company's real page links -->
+        <a class="social-btn" href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 21v-8h2.7l.5-3.2h-3.2V7.9c0-.9.4-1.7 1.8-1.7h1.5V3.4S15.2 3.2 14 3.2c-2.6 0-4.2 1.5-4.2 4.3v2.3H7v3.2h2.8v8z" fill="currentColor" stroke="none"/></svg></a>
+        <a class="social-btn" href="#" aria-label="LinkedIn" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9h3.4v10H5zM6.7 4.2a2 2 0 110 4 2 2 0 010-4zM10.3 9h3.2v1.4c.5-.9 1.6-1.7 3.3-1.7 3.2 0 3.7 2.1 3.7 4.8V19h-3.4v-4.9c0-1.2 0-2.7-1.7-2.7s-1.9 1.3-1.9 2.6V19h-3.4z" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4>Our Services</h4>
+      <a href="services.html#engineering">Civil Works</a>
+      <a href="services.html#engineering">Electrical, Automation and Instrumentation</a>
+      <a href="services.html#engineering">Procurement and Construction</a>
+      <a href="services.html#advisory">Advisory and supply services</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Mozambique Office</h4>
+      <a class="footer__line" href="tel:+258840694502"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg> +258 84 069 4502</a>
+      <p class="footer__line"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-10a6 6 0 0112 0c0 4.5-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg> Avenida 24 de Julho, No. 882, 7º Andar, Flat D, Polana Cimento B, Maputo, Moçambique</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Ghana Office</h4>
+      <a class="footer__line" href="tel:+233545166063"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg> +233 54 516 6063</a>
+      <p class="footer__line"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-10a6 6 0 0112 0c0 4.5-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg> No. 33 Osu Badu St. Airport Residential, Greater Accra, Accra, Ghana</p>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">© <span data-year>2026</span> Dos Santos Limited. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- Back to top button (appears after scrolling down) -->
+<button class="to-top" type="button" aria-label="Back to top"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<!-- Scripts: main.js runs on every page; the pages/ file adds this page's extras -->
+<script src="js/main.js" defer></script>
+<script src="js/pages/projects.js" defer></script>
+</body>
+</html>
+

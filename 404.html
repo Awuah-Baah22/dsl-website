@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Page not found | Dos Santos Limited</title>
+  <meta name="description" content="The page you are looking for does not exist or has moved.">
+
+  <!-- Social sharing preview (WhatsApp, LinkedIn, Facebook) -->
+  <meta property="og:title" content="Page not found | Dos Santos Limited">
+  <meta property="og:description" content="The page you are looking for does not exist or has moved.">
+  <meta property="og:image" content="images/site/logo.png">
+  <meta name="theme-color" content="#192A3D">
+  <link rel="icon" href="images/site/logo.png">
+
+  <!-- Fonts: Inter (text) and Fira Sans (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Sans:wght@500;600;700;800&display=swap">
+
+  <!-- Styles: base -> layout -> components -> page sections -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <!-- Lets the CSS know JavaScript is on (used by the scroll animations) -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="page-simple">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ================================================================
+     HEADER: logo, main menu, mobile menu button.
+     Same on every page. If you change a link, change it on all pages.
+     ================================================================ -->
+<header class="site-header" id="top">
+  <div class="container header__inner">
+    <a class="header__logo" href="index.html" aria-label="Dos Santos Limited, home">
+      <img src="images/site/logo.png" alt="Dos Santos Limited" width="132" height="66">
+    </a>
+
+    <!-- Main menu (becomes a slide-down panel on phones and tablets) -->
+    <nav class="nav" id="main-nav" aria-label="Main">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="services.html">Services</a>
+      <a class="nav__link" href="siemens.html">Siemens</a>
+      <div class="nav__item has-dropdown">
+        <a class="nav__link" href="projects.html" aria-haspopup="true">Projects <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="nav__dropdown">
+          <a class="nav__sublink" href="projects.html#eni">ENI Ghana track record</a>
+          <a class="nav__sublink" href="projects.html#portfolio">Project portfolio</a>
+          <a class="nav__sublink" href="projects.html#gallery">Gallery</a>
+        </div>
+      </div>
+      <div class="nav__item has-dropdown">
+        <a class="nav__link" href="about.html" aria-haspopup="true">About <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="nav__dropdown">
+          <a class="nav__sublink" href="esg.html">ESG</a>
+        </div>
+      </div>
+      <a class="nav__link" href="contact.html">Contact</a>
+      <a class="btn btn--primary nav__cta" href="contact.html?book#form">Book an appointment</a>
+    </nav>
+
+    <!-- Mobile menu button (shows below 1180px) -->
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <!-- Simple message page -->
+  <section class="simple-page">
+    <div class="simple-page__box">
+      <span class="simple-page__icon"><svg class="icon" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></span>
+      <h1>Page not found</h1>
+      <p>The page you are looking for does not exist or has moved.</p>
+      <a class="btn btn--primary" href="index.html">Go to the home page</a>
+    </div>
+  </section>
+</main>
+
+
+<!-- ================================================================
+     FOOTER: company summary, services, office addresses.
+     Same on every page.
+     ================================================================ -->
+<footer class="site-footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="index.html" aria-label="Dos Santos Limited, home"><img src="images/site/logo.png" alt="Dos Santos Limited" width="168" height="84"></a>
+      <p>Bridging gaps between clients, regulators and local environments to unlock industrial growth and strengthen local content across Africa.</p>
+      <p class="footer__line"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Mon - Fri, 8AM - 5PM</p>
+      <div class="footer__social">
+        <!-- Replace # with the company's real page links -->
+        <a class="social-btn" href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 21v-8h2.7l.5-3.2h-3.2V7.9c0-.9.4-1.7 1.8-1.7h1.5V3.4S15.2 3.2 14 3.2c-2.6 0-4.2 1.5-4.2 4.3v2.3H7v3.2h2.8v8z" fill="currentColor" stroke="none"/></svg></a>
+        <a class="social-btn" href="#" aria-label="LinkedIn" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9h3.4v10H5zM6.7 4.2a2 2 0 110 4 2 2 0 010-4zM10.3 9h3.2v1.4c.5-.9 1.6-1.7 3.3-1.7 3.2 0 3.7 2.1 3.7 4.8V19h-3.4v-4.9c0-1.2 0-2.7-1.7-2.7s-1.9 1.3-1.9 2.6V19h-3.4z" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4>Our Services</h4>
+      <a href="services.html#engineering">Civil Works</a>
+      <a href="services.html#engineering">Electrical, Automation and Instrumentation</a>
+      <a href="services.html#engineering">Procurement and Construction</a>
+      <a href="services.html#advisory">Advisory and supply services</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Mozambique Office</h4>
+      <a class="footer__line" href="tel:+258840694502"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg> +258 84 069 4502</a>
+      <p class="footer__line"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-10a6 6 0 0112 0c0 4.5-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg> Avenida 24 de Julho, No. 882, 7º Andar, Flat D, Polana Cimento B, Maputo, Moçambique</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Ghana Office</h4>
+      <a class="footer__line" href="tel:+233545166063"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg> +233 54 516 6063</a>
+      <p class="footer__line"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-10a6 6 0 0112 0c0 4.5-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg> No. 33 Osu Badu St. Airport Residential, Greater Accra, Accra, Ghana</p>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">© <span data-year>2026</span> Dos Santos Limited. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- Back to top button (appears after scrolling down) -->
+<button class="to-top" type="button" aria-label="Back to top"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<!-- Scripts: main.js runs on every page; the pages/ file adds this page's extras -->
+<script src="js/main.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>About Us | Dos Santos Limited</title>
+  <meta name="description" content="Dos Santos Limited is an engineering and advisory partner across Africa, connecting clients, regulators and local environments from Accra and Maputo.">
+
+  <!-- Social sharing preview (WhatsApp, LinkedIn, Facebook) -->
+  <meta property="og:title" content="About Us | Dos Santos Limited">
+  <meta property="og:description" content="Dos Santos Limited is an engineering and advisory partner across Africa, connecting clients, regulators and local environments from Accra and Maputo.">
+  <meta property="og:image" content="images/site/logo.png">
+  <meta name="theme-color" content="#192A3D">
+  <link rel="icon" href="images/site/logo.png">
+
+  <!-- Fonts: Inter (text) and Fira Sans (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Sans:wght@500;600;700;800&display=swap">
+
+  <!-- Styles: base -> layout -> components -> page sections -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <!-- Lets the CSS know JavaScript is on (used by the scroll animations) -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="page-about">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ================================================================
+     HEADER: logo, main menu, mobile menu button.
+     Same on every page. If you change a link, change it on all pages.
+     ================================================================ -->
+<header class="site-header" id="top">
+  <div class="container header__inner">
+    <a class="header__logo" href="index.html" aria-label="Dos Santos Limited, home">
+      <img src="images/site/logo.png" alt="Dos Santos Limited" width="132" height="66">
+    </a>
+
+    <!-- Main menu (becomes a slide-down panel on phones and tablets) -->
+    <nav class="nav" id="main-nav" aria-label="Main">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="services.html">Services</a>
+      <a class="nav__link" href="siemens.html">Siemens</a>
+      <div class="nav__item has-dropdown">
+        <a class="nav__link" href="projects.html" aria-haspopup="true">Projects <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="nav__dropdown">
+          <a class="nav__sublink" href="projects.html#eni">ENI Ghana track record</a>
+          <a class="nav__sublink" href="projects.html#portfolio">Project portfolio</a>
+          <a class="nav__sublink" href="projects.html#gallery">Gallery</a>
+        </div>
+      </div>
+      <div class="nav__item has-dropdown">
+        <a class="nav__link is-active" href="about.html" aria-haspopup="true">About <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="nav__dropdown">
+          <a class="nav__sublink" href="esg.html">ESG</a>
+        </div>
+      </div>
+      <a class="nav__link" href="contact.html">Contact</a>
+      <a class="btn btn--primary nav__cta" href="contact.html?book#form">Book an appointment</a>
+    </nav>
+
+    <!-- Mobile menu button (shows below 1180px) -->
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================================================================
+       HERO
+       ================================================================ -->
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <div class="page-hero__text reveal">
+        <span class="eyebrow eyebrow--orange eyebrow--line">About Dos Santos Limited</span>
+        <h1>Engineering and advisory partner across Africa</h1>
+        <p class="page-hero__lead">We connect clients, regulators and local environments to unlock industrial growth and strengthen local content.</p>
+        <span class="tag">Accra / Maputo</span>
+      </div>
+      <div class="page-hero__art reveal" aria-hidden="true">
+        <img src="images/illustrations/about-hero.svg" alt="">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       OUR STORY + WHERE WE OPERATE
+       Replace the [BRACKETS] with your own text.
+       ================================================================ -->
+  <section class="section">
+    <div class="container story">
+      <div class="story__text reveal">
+        <span class="eyebrow eyebrow--orange eyebrow--line">Our story</span>
+        <h2>Growing across Africa, <span>from Maputo to Accra</span></h2>
+        <p class="story__lead">Dos Santos Limited drives sustainable development across Africa by bridging the gaps between clients, regulators and local environments.</p>
+        <p>[YOUR COMPANY STORY: why DSL was founded, what you have built so far, and where you are going.]</p>
+        <p>[SECOND PARAGRAPH: the team, the sectors you serve and the results so far.]</p>
+      </div>
+
+      <div class="locations reveal">
+        <p class="locations__title">Where we operate</p>
+        <div class="location">
+          <span class="location__pin"><svg class="icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-10a6 6 0 0112 0c0 4.5-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg></span>
+          <span><strong>Maputo</strong><small>Mozambique</small></span>
+        </div>
+        <div class="locations__dash"></div>
+        <div class="location">
+          <span class="location__pin"><svg class="icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-10a6 6 0 0112 0c0 4.5-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg></span>
+          <span><strong>Accra</strong><small>Ghana</small></span>
+        </div>
+        <div class="locations__foot"><span>Operations</span><strong>Across Africa</strong></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       MISSION AND VISION (animated cards on white)
+       Replace the [BRACKETS] with your own text.
+       ================================================================ -->
+  <section class="section purpose">
+    <div class="purpose__grid" aria-hidden="true"></div>
+    <div class="purpose__orb purpose__orb--1" aria-hidden="true"></div>
+    <div class="purpose__orb purpose__orb--2" aria-hidden="true"></div>
+
+    <div class="container stack">
+      <div class="section-head reveal">
+        <span class="eyebrow eyebrow--orange eyebrow--line">Purpose</span>
+        <h2>Our mission and vision</h2>
+      </div>
+
+      <div class="purpose-cards">
+        <article class="purpose-card reveal">
+          <div class="purpose-card__inner">
+            <div class="purpose-card__art"><img src="images/illustrations/mission.svg" alt=""></div>
+            <div class="purpose-card__text">
+              <div class="purpose-card__tag"><b>01</b><i></i>Purpose</div>
+              <h3>Our mission</h3>
+              <p>[YOUR MISSION: one or two sentences on what DSL sets out to do for clients and for local communities.]</p>
+              <p>[SECOND PARAGRAPH: how you deliver it day to day.]</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="purpose-card purpose-card--vision reveal">
+          <div class="purpose-card__inner">
+            <div class="purpose-card__art"><img src="images/illustrations/vision.svg" alt=""></div>
+            <div class="purpose-card__text">
+              <div class="purpose-card__tag"><b>02</b><i></i>Purpose</div>
+              <h3>Our vision</h3>
+              <p>[YOUR VISION: one or two sentences on where DSL wants to be in the coming years.]</p>
+              <p>[SECOND PARAGRAPH: what success looks like for clients and communities.]</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       CORE VALUES
+       Three colour waves draw across, then the cards rise (js/pages/about.js)
+       ================================================================ -->
+  <section class="section values" id="values">
+    <div class="values__wave values__wave--1" aria-hidden="true"><svg viewBox="0 0 1440 640" preserveAspectRatio="none"><path d="M-20 550 C 300 550, 430 300, 760 290 C 1010 282, 1210 355, 1460 300 L1460 346 C 1210 402, 1010 336, 780 344 C 480 354, 320 618, -20 618 Z" fill="#F7931E"/></svg></div>
+    <div class="values__wave values__wave--2" aria-hidden="true"><svg viewBox="0 0 1440 640" preserveAspectRatio="none"><path d="M-20 615 C 300 615, 430 365, 760 355 C 1010 347, 1210 420, 1460 365 L1460 411 C 1210 467, 1010 401, 780 409 C 480 419, 320 683, -20 683 Z" fill="#18AEEA"/></svg></div>
+    <div class="values__wave values__wave--3" aria-hidden="true"><svg viewBox="0 0 1440 640" preserveAspectRatio="none"><path d="M-20 680 C 300 680, 430 430, 760 420 C 1010 412, 1210 485, 1460 430 L1460 476 C 1210 532, 1010 466, 780 474 C 480 484, 320 748, -20 748 Z" fill="#8C99A6"/></svg></div>
+
+    <div class="container stack">
+      <div class="section-head">
+        <span class="eyebrow eyebrow--orange eyebrow--line">What guides us</span>
+        <h2>Our core values</h2>
+        <p>Four principles that shape how we plan, build and work with clients, partners and communities.</p>
+      </div>
+
+      <div class="value-grid">
+        <div class="value-card">
+          <span class="value-card__icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14zM5 19l7-7"/></svg></span>
+          <h3>Better Tomorrow</h3>
+          <p>We focus on sustainable and inclusive development and growth.</p>
+        </div>
+        <div class="value-card">
+          <span class="value-card__icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M16 5.5a3 3 0 010 5.5M18 14.5c2 .7 3 2.5 3 5.5"/></svg></span>
+          <h3>People First</h3>
+          <p>We work with people’s welfare and well-being in mind.</p>
+        </div>
+        <div class="value-card">
+          <span class="value-card__icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M6 16l4-5 3 3 5-7"/></svg></span>
+          <h3>Positive Sum Thinking</h3>
+          <p>We think (Win-Win-Win) in all business decisions.</p>
+        </div>
+        <div class="value-card">
+          <span class="value-card__icon"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+          <h3>Consistent</h3>
+          <p>We use systems and protocols to ensure that our values and great output are consistently implemented.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       POLICIES
+       Tap a title to open it (+ when closed, − when open).
+       PDFs: put the files in the policies/ folder with the names below.
+       "View PDF" opens the file in a new tab.
+       ================================================================ -->
+  <section class="section section--cloud" id="policies">
+    <div class="container stack">
+      <div class="policies__head">
+        <div class="section-head section-head--left reveal">
+          <span class="eyebrow eyebrow--line">Governance</span>
+          <h2>Our Policies</h2>
+        </div>
+        <p class="reveal">At Dos Santos Limited, we are committed to maintaining the highest standards of integrity, transparency, and accountability in all our operations. Our policies reflect our dedication to ethical practices, compliance with regulations, and commitment to sustainability and community development.</p>
+      </div>
+
+      <div class="accordion">
+        <!-- Quality Policy -->
+        <details class="accordion__item reveal">
+          <summary>
+            <span>Quality Policy</span>
+            <span class="icon-plus"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span><span class="icon-minus"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16"/></svg></span>
+          </summary>
+          <div class="accordion__body">
+            <p>Quality is at the core of everything we do. Our Quality Policy ensures that we deliver exceptional services that meet and exceed client expectations. We are committed to:</p>
+            <ul><li>Ensuring client satisfaction through continuous feedback and improvement.</li><li>Adhering to international quality standards and best practices.</li><li>Regularly reviewing and improving our processes and systems.</li></ul>
+            <a class="btn btn--primary" href="policies/quality-policy.pdf" target="_blank" rel="noopener"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 13h6M9 17h6"/></svg> View PDF</a>
+          </div>
+        </details>
+
+        <!-- Health and Safety Policy -->
+        <details class="accordion__item reveal">
+          <summary>
+            <span>Health and Safety Policy</span>
+            <span class="icon-plus"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span><span class="icon-minus"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16"/></svg></span>
+          </summary>
+          <div class="accordion__body">
+            <p>[POLICY SUMMARY: one or two sentences on this policy. We are committed to:]</p>
+            <ul><li>[Commitment one]</li><li>[Commitment two]</li><li>[Commitment three]</li></ul>
+            <a class="btn btn--primary" href="policies/health-and-safety-policy.pdf" target="_blank" rel="noopener"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 13h6M9 17h6"/></svg> View PDF</a>
+          </div>
+        </details>
+
+        <!-- Corporate Social Policy -->
+        <details class="accordion__item reveal">
+          <summary>
+            <span>Corporate Social Policy</span>
+            <span class="icon-plus"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span><span class="icon-minus"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16"/></svg></span>
+          </summary>
+          <div class="accordion__body">
+            <p>[POLICY SUMMARY: one or two sentences on this policy. We are committed to:]</p>
+            <ul><li>[Commitment one]</li><li>[Commitment two]</li><li>[Commitment three]</li></ul>
+            <a class="btn btn--primary" href="policies/corporate-social-policy.pdf" target="_blank" rel="noopener"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 13h6M9 17h6"/></svg> View PDF</a>
+          </div>
+        </details>
+
+        <!-- Sustainability Policy -->
+        <details class="accordion__item reveal">
+          <summary>
+            <span>Sustainability Policy</span>
+            <span class="icon-plus"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span><span class="icon-minus"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16"/></svg></span>
+          </summary>
+          <div class="accordion__body">
+            <p>[POLICY SUMMARY: one or two sentences on this policy. We are committed to:]</p>
+            <ul><li>[Commitment one]</li><li>[Commitment two]</li><li>[Commitment three]</li></ul>
+            <a class="btn btn--primary" href="policies/sustainability-policy.pdf" target="_blank" rel="noopener"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 13h6M9 17h6"/></svg> View PDF</a>
+          </div>
+        </details>
+
+        <!-- Human Rights Policy -->
+        <details class="accordion__item reveal">
+          <summary>
+            <span>Human Rights Policy</span>
+            <span class="icon-plus"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span><span class="icon-minus"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16"/></svg></span>
+          </summary>
+          <div class="accordion__body">
+            <p>[POLICY SUMMARY: one or two sentences on this policy. We are committed to:]</p>
+            <ul><li>[Commitment one]</li><li>[Commitment two]</li><li>[Commitment three]</li></ul>
+            <a class="btn btn--primary" href="policies/human-rights-policy.pdf" target="_blank" rel="noopener"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 13h6M9 17h6"/></svg> View PDF</a>
+          </div>
+        </details>
+
+        <!-- Code of Ethics -->
+        <details class="accordion__item reveal">
+          <summary>
+            <span>Code of Ethics</span>
+            <span class="icon-plus"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span><span class="icon-minus"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16"/></svg></span>
+          </summary>
+          <div class="accordion__body">
+            <p>[POLICY SUMMARY: one or two sentences on this policy. We are committed to:]</p>
+            <ul><li>[Commitment one]</li><li>[Commitment two]</li><li>[Commitment three]</li></ul>
+            <a class="btn btn--primary" href="policies/code-of-ethics.pdf" target="_blank" rel="noopener"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 13h6M9 17h6"/></svg> View PDF</a>
+          </div>
+        </details>
+
+        <!-- Code of Conduct -->
+        <details class="accordion__item reveal">
+          <summary>
+            <span>Code of Conduct</span>
+            <span class="icon-plus"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span><span class="icon-minus"><svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16"/></svg></span>
+          </summary>
+          <div class="accordion__body">
+            <p>[POLICY SUMMARY: one or two sentences on this policy. We are committed to:]</p>
+            <ul><li>[Commitment one]</li><li>[Commitment two]</li><li>[Commitment three]</li></ul>
+            <a class="btn btn--primary" href="policies/code-of-conduct.pdf" target="_blank" rel="noopener"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 13h6M9 17h6"/></svg> View PDF</a>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- ================================================================
+     FOOTER: company summary, services, office addresses.
+     Same on every page.
+     ================================================================ -->
+<footer class="site-footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="index.html" aria-label="Dos Santos Limited, home"><img src="images/site/logo-light.png" alt="Dos Santos Limited" width="168" height="84"></a>
+      <p>Bridging gaps between clients, regulators and local environments to unlock industrial growth and strengthen local content across Africa.</p>
+      <p class="footer__line"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Mon - Fri, 8AM - 5PM</p>
+      <div class="footer__social">
+        <!-- Replace # with the company's real page links -->
+        <a class="social-btn" href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 21v-8h2.7l.5-3.2h-3.2V7.9c0-.9.4-1.7 1.8-1.7h1.5V3.4S15.2 3.2 14 3.2c-2.6 0-4.2 1.5-4.2 4.3v2.3H7v3.2h2.8v8z" fill="currentColor" stroke="none"/></svg></a>
+        <a class="social-btn" href="#" aria-label="LinkedIn" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9h3.4v10H5zM6.7 4.2a2 2 0 110 4 2 2 0 010-4zM10.3 9h3.2v1.4c.5-.9 1.6-1.7 3.3-1.7 3.2 0 3.7 2.1 3.7 4.8V19h-3.4v-4.9c0-1.2 0-2.7-1.7-2.7s-1.9 1.3-1.9 2.6V19h-3.4z" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4>Our Services</h4>
+      <a href="services.html#engineering">Civil Works</a>
+      <a href="services.html#engineering">Electrical, Automation and Instrumentation</a>
+      <a href="services.html#engineering">Procurement and Construction</a>
+      <a href="services.html#advisory">Advisory and supply services</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Mozambique Office</h4>
+      <a class="footer__line" href="tel:+258840694502"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg> +258 84 069 4502</a>
+      <p class="footer__line"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-10a6 6 0 0112 0c0 4.5-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg> Avenida 24 de Julho, No. 882, 7º Andar, Flat D, Polana Cimento B, Maputo, Moçambique</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Ghana Office</h4>
+      <a class="footer__line" href="tel:+233545166063"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg> +233 54 516 6063</a>
+      <p class="footer__line"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-10a6 6 0 0112 0c0 4.5-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg> No. 33 Osu Badu St. Airport Residential, Greater Accra, Accra, Ghana</p>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">© <span data-year>2026</span> Dos Santos Limited. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- Back to top button (appears after scrolling down) -->
+<button class="to-top" type="button" aria-label="Back to top"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<!-- Scripts: main.js runs on every page; the pages/ file adds this page's extras -->
+<script src="js/main.js" defer></script>
+<script src="js/pages/about.js" defer></script>
+</body>
+</html>
+

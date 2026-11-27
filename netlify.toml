@@ -1,0 +1,4 @@
+# Netlify settings for the Dos Santos Limited site.
+# The site is plain HTML: there is nothing to build, so Netlify publishes this folder as it is.
+[build]
+  publish = "."

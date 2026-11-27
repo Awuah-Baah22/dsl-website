@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dos Santos Limited</title>
+  <meta name="description" content="Dos Santos Limited (DSL) delivers civil works, electrical, automation and instrumentation, procurement and construction, and Siemens LV/MV solutions across Ghana, Mozambique and Africa.">
+
+  <!-- Social sharing preview (WhatsApp, LinkedIn, Facebook) -->
+  <meta property="og:title" content="Dos Santos Limited | Engineering, Construction and Siemens Solutions in Africa">
+  <meta property="og:description" content="Dos Santos Limited (DSL) delivers civil works, electrical, automation and instrumentation, procurement and construction, and Siemens LV/MV solutions across Ghana, Mozambique and Africa.">
+  <meta property="og:image" content="images/site/logo-light.png">
+  <meta name="theme-color" content="#192A3D">
+  <link rel="icon" href="images/site/logo-light.png">
+
+  <!-- Fonts: Inter (text) and Fira Sans (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Sans:wght@500;600;700;800&display=swap">
+
+  <!-- Styles: base -> layout -> components -> page sections -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <!-- Lets the CSS know JavaScript is on (used by the scroll animations) -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="page-home">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ================================================================
+     HEADER: logo, main menu, mobile menu button.
+     Same on every page. If you change a link, change it on all pages.
+     ================================================================ -->
+<header class="site-header" id="top">
+  <div class="container header__inner">
+    <a class="header__logo" href="index.html" aria-label="Dos Santos Limited, home">
+      <img src="images/site/logo.png" alt="Dos Santos Limited" width="132" height="66">
+    </a>
+
+    <!-- Main menu (becomes a slide-down panel on phones and tablets) -->
+    <nav class="nav" id="main-nav" aria-label="Main">
+      <a class="nav__link is-active" aria-current="page" href="index.html">Home</a>
+      <a class="nav__link" href="services.html">Services</a>
+      <a class="nav__link" href="siemens.html">Siemens</a>
+      <div class="nav__item has-dropdown">
+        <a class="nav__link" href="projects.html" aria-haspopup="true">Projects <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="nav__dropdown">
+          <a class="nav__sublink" href="projects.html#eni">ENI Ghana track record</a>
+          <a class="nav__sublink" href="projects.html#portfolio">Project portfolio</a>
+          <a class="nav__sublink" href="projects.html#gallery">Gallery</a>
+        </div>
+      </div>
+      <div class="nav__item has-dropdown">
+        <a class="nav__link" href="about.html" aria-haspopup="true">About <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="nav__dropdown">
+          <a class="nav__sublink" href="esg.html">ESG</a>
+        </div>
+      </div>
+      <a class="nav__link" href="contact.html">Contact</a>
+      <a class="btn btn--primary nav__cta" href="contact.html?book#form">Book an appointment</a>
+    </nav>
+
+    <!-- Mobile menu button (shows below 1180px) -->
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================================================================
+       HERO
+       Photos change every 5 seconds (js/pages/home.js).
+       To add a photo: copy one <img class="home-hero__slide"> line and change src.
+       The illustration behind them shows until the photos load.
+       ================================================================ -->
+  <section class="home-hero">
+    <div class="home-hero__art" aria-hidden="true">
+      <img src="images/illustrations/home-hero.svg" alt="">
+    </div>
+
+    <div class="home-hero__slides" aria-hidden="true">
+      <img class="home-hero__slide is-active" src="images/hero pic.jpg" alt="">
+      <img class="home-hero__slide" src="images/site/hero pic 2.jpg" alt="">
+      <!-- <img class="home-hero__slide" src="images/hero-slideshow 1.jpg" alt=""> -->
+      <!-- <img class="home-hero__slide" src="images/hero-slideshow 4.jpg" alt=""> -->
+    </div>
+    <div class="home-hero__shade" aria-hidden="true"></div>
+    <div class="home-hero__dots"></div><!-- dots are added by home.js -->
+
+    <div class="container home-hero__inner">
+      <div class="home-hero__text">
+        <span class="home-hero__badge"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14zM5 19l7-7"/></svg> Bridging gaps, fueling growth with sustainable solutions</span>
+        <h1>Powering Africa's <span>sustainable future.</span></h1>
+        <p>Dos Santos Limited (DSL), founded in 2017, drives sustainable development across Africa by bridging gaps between clients, regulators and local environments. We create enabling conditions that unlock industrial growth and strengthen local content.</p>
+        <div class="btn-row">
+          <a class="btn btn--orange" href="services.html">Our services <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--ghost" href="contact.html">Consultation</a>
+        </div>
+      </div>
+    </div>
+
+    <a class="scroll-cue" href="#stats" aria-label="Scroll down"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l6 6 6-6M6 13l6 6 6-6"/></svg></a>
+  </section>
+
+
+  <!-- ================================================================
+       STATS (hangs over the bottom of the hero)
+       ================================================================ -->
+  <section id="stats">
+    <div class="container">
+      <!-- Same numbers on Home and Projects: if you change one, change both. data-count = the number it counts up to -->
+      <div class="stats stats--overlap reveal">
+        <div class="stat">
+          <span class="stat__icon"><svg class="icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 4.5-9 4.5-9-4.5zM3 12l9 4.5 9-4.5M3 16.5l9 4.5 9-4.5"/></svg></span>
+          <span class="stat__number"><span data-count="47">47</span>+</span>
+          <span class="stat__label">Projects</span>
+        </div>
+        <div class="stat">
+          <span class="stat__icon"><svg class="icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M16 5.5a3 3 0 010 5.5M18 14.5c2 .7 3 2.5 3 5.5"/></svg></span>
+          <span class="stat__number"><span data-count="35">35</span>+</span>
+          <span class="stat__label">Clients</span>
+        </div>
+        <div class="stat">
+          <span class="stat__icon"><svg class="icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M6 16l4-5 3 3 5-7"/></svg></span>
+          <span class="stat__number"><span data-count="79">79</span>+</span>
+          <span class="stat__label">Consultations</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       TRUSTED BY: moving client logos
+       Drag or swipe it; it keeps moving after you let go.
+       Logo files: change src. If a file is missing, the name shows instead.
+       ================================================================ -->
+  <section class="trusted">
+    <div class="container">
+      <p class="trusted__title">Trusted by industry leaders</p>
+      <div class="logo-strip" aria-label="Our clients">
+        <div class="logo-strip__track">
+          <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/logo_altrad.png" alt="ALTRAD" loading="lazy"><span>ALTRAD</span></div>
+          <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/eni-ghana.jpg" alt="ENI GHANA" loading="lazy"><span>ENI GHANA</span></div>
+          <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/mtn.jpg" alt="MTN" loading="lazy"><span>MTN</span></div>
+          <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/spie-1.png" alt="SPIE" loading="lazy"><span>SPIE</span></div>
+          <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/Bonatti.jpg" alt="Bonatti" loading="lazy"><span>Bonatti</span></div>
+          <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/Technip_fmc.webp" alt="Technip FMC" loading="lazy"><span>Technip FMC</span></div>
+          <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/Gro Alliance.jpg" alt="Gro Alliance" loading="lazy"><span>Gro Alliance</span></div>
+          <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/7-eleven.jpg" alt="7 Eleven" loading="lazy"><span>7 Eleven</span></div>
+          <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/Borri_logo.jpg" alt="Borri" loading="lazy"><span>Borri</span></div>
+          <div class="logo-strip__item"><img class="logo-strip__img" src="images/clients/ropetech.png" alt="Ropetech" loading="lazy"><span>Ropetech</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       WHAT WE DO: three photo cards
+       Photos: images/services/
+       ================================================================ -->
+  <section class="section">
+    <div class="container stack">
+      <div class="section-head reveal">
+        <span class="eyebrow">What we do</span>
+        <h2>Engineering that moves industry forward</h2>
+        <p>Three core capabilities, backed by five advisory and supply services.</p>
+      </div>
+
+      <div class="photo-grid">
+        <!-- Card 1: Civil Works -->
+        <a class="photo-card reveal" href="services.html#engineering">
+          <div class="photo-card__media photo-placeholder"><img data-slot src="images/services/civil works.jpg" alt="Civil works site" loading="lazy"></div>
+          <div class="photo-card__shade"></div>
+          <div class="photo-card__body">
+            <h3>Civil Works</h3>
+            <p>Comprehensive infrastructure solutions covering design, construction, and maintenance of structural and foundational systems for lasting durability and efficiency.</p>
+            <span class="link-arrow">Learn more <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+
+        <!-- Card 2: Electrical, Automation and Instrumentation -->
+        <a class="photo-card reveal" href="services.html#engineering">
+          <div class="photo-card__media photo-placeholder"><img data-slot src="images/services/electrical 1.jpg" alt="Electrical panel installation" loading="lazy"></div>
+          <div class="photo-card__shade"></div>
+          <div class="photo-card__body">
+            <h3>Electrical, Automation and Instrumentation</h3>
+            <p>Reliable solutions for power, control, and precision to enhance efficiency and operational performance.</p>
+            <span class="link-arrow">Learn more <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+
+        <!-- Card 3: Procurement and Construction (full width) -->
+        <a class="photo-card is-wide reveal" href="services.html#engineering">
+          <div class="photo-card__media photo-placeholder"><img data-slot src="images/services/construction.jpg" alt="Construction project" loading="lazy"></div>
+          <div class="photo-card__shade"></div>
+          <div class="photo-card__body">
+            <h3>Construction</h3>
+            <p>Delivering construction services including office buildings, fabrication, chemical containment, drainage, and fencing.</p>
+            <span class="link-arrow">Learn more <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="btn-row btn-row--center reveal">
+        <a class="btn btn--primary" href="projects.html">All projects <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       HOW WE WORK
+       ================================================================ -->
+  <section class="section section--cloud">
+    <div class="container stack">
+      <div class="how-we-work__head">
+        <div class="section-head section-head--left reveal">
+          <span class="eyebrow">How we work</span>
+          <h2>One partner between clients, regulators and local environments</h2>
+          <p>We create enabling conditions that unlock industrial growth and strengthen local content.</p>
+        </div>
+        <a class="btn btn--primary reveal" href="about.html">About DSL <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+
+      <div class="steps">
+        <div class="step reveal">
+          <span class="step__num">1</span>
+          <div><h3>Clients</h3><p>Industrial operators who need dependable engineering, procurement and construction partners.</p></div>
+        </div>
+        <div class="step reveal">
+          <span class="step__num">2</span>
+          <div><h3>Regulators</h3><p>Work that follows local and international standards from the first design to handover.</p></div>
+        </div>
+        <div class="step reveal">
+          <span class="step__num">3</span>
+          <div><h3>Local environments</h3><p>Projects that strengthen local content and respect the communities around them.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       SELECTED PROJECTS
+       Photos: images/projects/selected-project-1.jpg, -2.jpg, -3.jpg
+       Replace the [BRACKETS] with real project details.
+       ================================================================ -->
+   <!-- <section class="section" id="projects">
+    <div class="container stack">
+      <div class="section-head reveal">
+        <span class="eyebrow">Our work</span>
+        <h2>Selected projects</h2>
+      </div>
+
+   
+      <!-- <div class="project-grid">
+        <article class="project-card reveal">
+          <div class="project-card__media photo-placeholder"><img data-slot src="images/projects/selected-project-1.jpg" alt="[Project name]" loading="lazy"></div>
+          <div class="project-card__body"><h3>[PROJECT NAME]</h3><p>[Location] · [Scope of work] · [Year]</p></div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-card__media photo-placeholder"><img data-slot src="images/projects/selected-project-2.jpg" alt="[Project name]" loading="lazy"></div>
+          <div class="project-card__body"><h3>[PROJECT NAME]</h3><p>[Location] · [Scope of work] · [Year]</p></div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-card__media photo-placeholder"><img data-slot src="images/projects/selected-project-3.jpg" alt="[Project name]" loading="lazy"></div>
+          <div class="project-card__body"><h3>[PROJECT NAME]</h3><p>[Location] · [Scope of work] · [Year]</p></div>
+        </article>
+      </div> -->
+    </div>
+  </section> 
+
+<!--  commented out -->
+  <!-- ================================================================
+       TESTIMONIALS (company logo + company name under each quote)
+       Logos: images/testimonials/company-1.png ... company-4.png
+       Slides by itself; pauses when the mouse is over it.
+       ================================================================ -->
+  <!-- <section class="section testimonials-section">
+    <div class="container stack">
+      <div class="section-head reveal">
+        <span class="eyebrow">Testimonials</span>
+        <h2>What our clients are saying about our company and products</h2>
+      </div>
+    </div>
+    <div class="testimonials reveal">
+      <div class="testimonials__track">
+        <figure class="testimonial">
+          <blockquote>&ldquo;We needed Siemens switchgear and protection devices for a new installation and wanted genuine products with local support. DSL helped us specify the right equipment, sourced it directly as an authorized partner, and supported the installation through to commissioning. Having experts nearby who know the products made a real difference.&rdquo;</blockquote>
+          <figcaption class="testimonial__by">
+            <span class="testimonial__logo"><img data-slot src="images/clients/Technip_fmc.webp" alt=" company-logo" loading="lazy"></span>
+            <span class="testimonial__who">
+              <strong>Technip FMC</strong>
+              <span></span>
+              <span class="testimonial__stars" aria-label="5 out of 5"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor" stroke="none"/></svg><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor" stroke="none"/></svg><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor" stroke="none"/></svg><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor" stroke="none"/></svg><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor" stroke="none"/></svg></span>
+            </span>
+          </figcaption>
+        </figure>
+        <figure class="testimonial">
+          <blockquote>&ldquo;When our emergency generator needed testing and our control system needed changes, DSL's engineers handled it from start to finish. They did the load testing, firmware updates and system configuration with minimal disruption to operations. We now rely on them for ongoing maintenance because they understand our systems and respond quickly when something goes wrong&rdquo;</blockquote>
+          <figcaption class="testimonial__by">
+            <span class="testimonial__logo"><img data-slot src="images/clients/logo_altrad.png" alt="company-logo" loading="lazy"></span>
+            <span class="testimonial__who">
+              <strong>Altrad</strong>
+              <span></span>
+              <span class="testimonial__stars" aria-label="5 out of 5"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor" stroke="none"/></svg><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor" stroke="none"/></svg><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor" stroke="none"/></svg><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor" stroke="none"/></svg><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor" stroke="none"/></svg></span>
+            </span>
+          </figcaption>
+        </figure>
+        <figure class="testimonial">
+          <blockquote>&ldquo;DSL built our chemical containment area and drainage system to the standard our operations needed. Their team understood the safety and environmental requirements from day one, and the finished work has held up well under daily use. They were organised, easy to work with, and kept the site clean and safe throughout.&rdquo;</blockquote>
+          <figcaption class="testimonial__by">
+            <span class="testimonial__logo"><img data-slot src="images/clients/7-eleven.jpg" alt="company-logo" loading="lazy"></span>
+            <span class="testimonial__who">
+              <strong>7 Eleven</strong>
+              <span></span>
+              <span class="testimonial__stars" aria-label="5 out of 5"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor" stroke="none"/></svg><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor" stroke="none"/></svg><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor" stroke="none"/></svg><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor" stroke="none"/></svg><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor" stroke="none"/></svg></span>
+            </span>
+          </figcaption>
+        </figure>
+        <figure class="testimonial"> 
+          <blockquote>&ldquo;DSL handles the ongoing maintenance at our site, from troubleshooting electrical faults to corrosion control, repairs and repainting. When something breaks, they find the cause quickly and source the right spare parts without long delays. Their regular care has kept our equipment running and cut down on unplanned downtime. It feels like having an extra maintenance team on call.&rdquo;</blockquote>
+          <figcaption class="testimonial__by">
+            <span class="testimonial__logo"><img data-slot src="images/clients/Gro Alliance.jpg" alt="company-logo" loading="lazy"></span>
+            <span class="testimonial__who">
+              <strong>Gro Alliance</strong>
+              <span>Project name</span>
+              <span class="testimonial__stars" aria-label="5 out of 5"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor" stroke="none"/></svg><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor" stroke="none"/></svg><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor" stroke="none"/></svg><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor" stroke="none"/></svg><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor" stroke="none"/></svg></span>
+            </span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section> -->
+
+</main>
+
+
+<!-- ================================================================
+     FOOTER: company summary, services, office addresses.
+     Same on every page.
+     ================================================================ -->
+<footer class="site-footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="index.html" aria-label="Dos Santos Limited, home"><img src="images/site/logo-light.png" alt="Dos Santos Limited" width="168" height="84"></a>
+      <p>Bridging gaps between clients, regulators and local environments to unlock industrial growth and strengthen local content across Africa.</p>
+      <p class="footer__line"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Mon - Fri, 8AM - 5PM</p>
+      <div class="footer__social">
+        <!-- Replace # with the company's real page links -->
+        <a class="social-btn" href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 21v-8h2.7l.5-3.2h-3.2V7.9c0-.9.4-1.7 1.8-1.7h1.5V3.4S15.2 3.2 14 3.2c-2.6 0-4.2 1.5-4.2 4.3v2.3H7v3.2h2.8v8z" fill="currentColor" stroke="none"/></svg></a>
+        <a class="social-btn" href="#" aria-label="LinkedIn" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9h3.4v10H5zM6.7 4.2a2 2 0 110 4 2 2 0 010-4zM10.3 9h3.2v1.4c.5-.9 1.6-1.7 3.3-1.7 3.2 0 3.7 2.1 3.7 4.8V19h-3.4v-4.9c0-1.2 0-2.7-1.7-2.7s-1.9 1.3-1.9 2.6V19h-3.4z" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4>Our Services</h4>
+      <a href="services.html#engineering">Civil Works</a>
+      <a href="services.html#engineering">Electrical, Automation and Instrumentation</a>
+      <a href="services.html#engineering">Procurement and Construction</a>
+      <a href="services.html#advisory">Advisory and supply services</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Mozambique Office</h4>
+      <a class="footer__line" href="tel:+258840694502"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg> +258 84 069 4502</a>
+      <p class="footer__line"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-10a6 6 0 0112 0c0 4.5-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg> Avenida 24 de Julho, No. 882, 7º Andar, Flat D, Polana Cimento B, Maputo, Moçambique</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Ghana Office</h4>
+      <a class="footer__line" href="tel:+233545166063"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg> +233 54 516 6063</a>
+      <p class="footer__line"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-10a6 6 0 0112 0c0 4.5-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg> No. 33 Osu Badu St. Airport Residential, Greater Accra, Accra, Ghana</p>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">© <span data-year>2026</span> Dos Santos Limited. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- Back to top button (appears after scrolling down) -->
+<button class="to-top" type="button" aria-label="Back to top"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<!-- Scripts: main.js runs on every page; the pages/ file adds this page's extras -->
+<script src="js/main.js" defer></script>
+<script src="js/pages/home.js" defer></script>
+</body>
+</html>
+
