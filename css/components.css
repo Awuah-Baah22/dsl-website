@@ -231,12 +231,13 @@ a:hover .link-arrow .icon { transform: translateX(4px); }
 .advisory-card__media.glow-blue   { --glow: radial-gradient(circle at 100% 0%, rgba(21, 89, 237, .85), transparent 60%); }
 .advisory-card__media.glow-orange { --glow: radial-gradient(circle at 100% 0%, rgba(232, 128, 26, .7), transparent 60%); }
 
-/* Dark fade over the bottom of the photo so the white text is readable.
+/* Dark fade at the bottom of the photo so the white text is readable.
    (.advisory-card__media has isolation, so the photo stays underneath this.) */
 .advisory-grid { --advisory-text: var(--white); }
 .advisory-card__shade {
   position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(0deg, rgba(8, 16, 32, .96) 0%, rgba(8, 16, 32, .7) 45%, rgba(8, 16, 32, .15) 100%);
+  /* dark only behind the text at the bottom; the top of the photo stays clear */
+  background: linear-gradient(0deg, rgba(8, 16, 32, .92) 0%, rgba(8, 16, 32, .65) 28%, rgba(8, 16, 32, 0) 55%);
   transition: background .3s;
 }
 .advisory-card:hover .advisory-card__shade { background: linear-gradient(0deg, rgba(8, 16, 32, .97) 0%, rgba(8, 16, 32, .9) 70%, rgba(8, 16, 32, .55) 100%); }
@@ -256,6 +257,8 @@ a:hover .link-arrow .icon { transform: translateX(4px); }
   .advisory-card.is-big, .advisory-card--wide { grid-column: auto; }
   .advisory-card h3, .advisory-card.is-big h3 { font-size: 24px; }
   .advisory-card__text { max-height: none; opacity: 1; margin-top: 14px; }   /* no hover on phones: always show */
+  /* text is taller on phones (description always shown), so the fade reaches higher */
+  .advisory-card__shade { background: linear-gradient(0deg, rgba(8, 16, 32, .92) 0%, rgba(8, 16, 32, .7) 50%, rgba(8, 16, 32, 0) 85%); }
 }
 
 
