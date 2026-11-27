@@ -1,68 +1,24 @@
 /* =====================================================================
    COMPONENTS.CSS
    Reusable building blocks (used on more than one page or likely to be):
-      1. Stats card (Home and Projects)
-      2. Logo strip (moving client logos, drag to scroll)
-      3. Photo cards (Home "What we do")
-      4. Engineering cards (Services)
-      5. Advisory cards (Services)
-      6. Feature cards (Siemens "How we support you")
-      7. Tags
-      8. Testimonials (Home)
-      9. Call-to-action band
-     10. Accordion (About policies)
-     11. Gallery viewer and lightbox (Projects)
-     12. Forms (Contact)
-     13. Map cards (Contact)
-     14. Client logo cards (Projects portfolio)
+      1. Logo strip (moving client logos, drag to scroll)
+      2. Photo cards (Home "What we do")
+      3. Engineering cards (Services)
+      4. Advisory cards (Services)
+      5. Feature cards (Siemens "How we support you")
+      6. Tags
+      7. Testimonials (Home)
+      8. Call-to-action band
+      9. Accordion (About policies)
+     10. Gallery viewer and lightbox (Projects)
+     11. Forms (Contact)
+     12. Map cards (Contact)
+     13. Client logo cards (Projects portfolio)
    ===================================================================== */
 
 
 /* ---------------------------------------------------------------------
-   1. STATS CARD
-   Numbers count up when scrolled into view: <span data-count="47">47</span>
-   --------------------------------------------------------------------- */
-.stats {
-  position: relative;
-  z-index: 5;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px 24px;
-  padding: 32px 40px;
-  background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: 0 18px 48px rgba(25, 42, 61, .16);
-}
-.stats--overlap { margin-top: -72px; }            /* hangs over the hero above */
-.stat { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; padding: 8px; }
-.stat__icon {
-  width: 56px; height: 56px;
-  display: inline-flex; align-items: center; justify-content: center;
-  border-radius: 50%;
-  background: var(--line);
-  color: var(--navy);
-}
-.stat__number { font: 700 56px/1 var(--font-head); color: var(--blue); }
-.stat__label { font-size: 17px; font-weight: 500; color: var(--text-soft); max-width: 220px; }
-
-@media (max-width: 820px) {
-  .stats { grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 24px 12px; }
-  .stat { padding: 4px; gap: 8px; }
-  .stat__number { font-size: 40px; }
-  .stat__label { font-size: 14px; }
-  .stat__icon { width: 46px; height: 46px; }
-}
-@media (max-width: 480px) {
-  .stats--overlap { margin-top: -56px; }
-  .stat__number { font-size: 30px; }
-  .stat__label { font-size: 12.5px; }
-  .stat__icon { width: 38px; height: 38px; }
-  .stat__icon .icon { width: 20px; height: 20px; }
-}
-
-
-/* ---------------------------------------------------------------------
-   2. LOGO STRIP
+   1. LOGO STRIP
    Scrolls by itself; visitors can also drag / swipe it back and forth.
    When they let go, it carries on scrolling (js/main.js, "Logo strips").
    - A logo shows when its image file exists, otherwise the name shows.
@@ -101,7 +57,7 @@
 
 
 /* ---------------------------------------------------------------------
-   3. PHOTO CARDS (Home "What we do")
+   2. PHOTO CARDS (Home "What we do")
    --------------------------------------------------------------------- */
 .photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .photo-grid .is-wide { grid-column: 1 / -1; }
@@ -144,7 +100,7 @@ a:hover .link-arrow .icon { transform: translateX(4px); }
 
 
 /* ---------------------------------------------------------------------
-   4. ENGINEERING CARDS (Services)
+   3. ENGINEERING CARDS (Services)
    Hover: card lifts, photo zooms, blue-to-orange line sweeps along the bottom.
    --------------------------------------------------------------------- */
 .eng-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
@@ -201,7 +157,7 @@ a:hover .link-arrow .icon { transform: translateX(4px); }
 
 
 /* ---------------------------------------------------------------------
-   5. ADVISORY CARDS (Services)
+   4. ADVISORY CARDS (Services)
    Layout (desktop): one tall card on the left; on the right two cards
    side by side, with one wide card (.advisory-card--wide) underneath.
    White text on a dark fade over the photo.
@@ -263,7 +219,7 @@ a:hover .link-arrow .icon { transform: translateX(4px); }
 
 
 /* ---------------------------------------------------------------------
-   6. FEATURE CARDS (Siemens "How we support you")
+   5. FEATURE CARDS (Siemens "How we support you")
    White cards: on hover the card lifts, a teal glow traces the border,
    the icon fills with colour and a line grows under the title.
    --------------------------------------------------------------------- */
@@ -327,14 +283,14 @@ a:hover .link-arrow .icon { transform: translateX(4px); }
 
 
 /* ---------------------------------------------------------------------
-   7. TAGS
+   6. TAGS
    --------------------------------------------------------------------- */
 .tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .tag { padding: 8px 12px; border-radius: 8px; background: var(--line); color: var(--navy); font: 600 13.5px/1.2 var(--font-body); }
 
 
 /* ---------------------------------------------------------------------
-   8. TESTIMONIALS (Home)
+   7. TESTIMONIALS (Home)
    Speech-bubble cards that slide along one at a time.
    Under each quote: the company logo and company name.
    --------------------------------------------------------------------- */
@@ -393,7 +349,7 @@ a:hover .link-arrow .icon { transform: translateX(4px); }
 
 
 /* ---------------------------------------------------------------------
-   9. CALL-TO-ACTION BAND
+   8. CALL-TO-ACTION BAND
    --------------------------------------------------------------------- */
 .cta-band { position: relative; overflow: hidden; color: #C9D4E0; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%); }
 .cta-band::before { content: ""; position: absolute; inset: 0; background: radial-gradient(50% 90% at 100% 0%, rgba(21, 89, 237, .35), transparent 70%); }
@@ -410,7 +366,7 @@ a:hover .link-arrow .icon { transform: translateX(4px); }
 
 
 /* ---------------------------------------------------------------------
-   10. ACCORDION (About policies) - uses <details>/<summary>, no JS needed
+   9. ACCORDION (About policies) - uses <details>/<summary>, no JS needed
    --------------------------------------------------------------------- */
 .accordion { display: flex; flex-direction: column; gap: 14px; }
 .accordion__item { border: 1px solid var(--line); border-radius: 10px; background: var(--white); overflow: hidden; }
@@ -440,7 +396,7 @@ a:hover .link-arrow .icon { transform: translateX(4px); }
 
 
 /* ---------------------------------------------------------------------
-   11. GALLERY VIEWER AND LIGHTBOX (Projects)
+   10. GALLERY VIEWER AND LIGHTBOX (Projects)
    --------------------------------------------------------------------- */
 .gallery { display: flex; flex-direction: column; gap: 18px; }
 .gallery__stage {
@@ -552,7 +508,7 @@ a:hover .link-arrow .icon { transform: translateX(4px); }
 
 
 /* ---------------------------------------------------------------------
-   12. FORMS (Contact)
+   11. FORMS (Contact)
    --------------------------------------------------------------------- */
 .form { display: flex; flex-direction: column; gap: 22px; padding: 40px; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); }
 .form h2 { font-size: 30px; }
@@ -583,7 +539,7 @@ textarea.input { min-height: 140px; padding: 12px 14px; resize: vertical; }
 
 
 /* ---------------------------------------------------------------------
-   13. MAP CARDS (Contact)
+   12. MAP CARDS (Contact)
    --------------------------------------------------------------------- */
 .map-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
 .map-card { display: flex; flex-direction: column; overflow: hidden; background: var(--white); border: 1px solid var(--line); border-radius: 16px; }
@@ -594,23 +550,40 @@ textarea.input { min-height: 140px; padding: 12px 14px; resize: vertical; }
 
 
 /* ---------------------------------------------------------------------
-   14. CLIENT LOGO CARDS (Projects portfolio)
+   13. CLIENT LOGO CARDS (Projects portfolio)
    --------------------------------------------------------------------- */
-.client-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+.client-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }   /* 4 columns; 3 on tablets, 2 on phones */
+@media (max-width: 1024px) { .client-grid { grid-template-columns: repeat(3, 1fr); } }
 .client-card {
+  position: relative;
+  overflow: hidden;
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
   padding: 28px 20px 22px;
   background: var(--white);
   border-radius: 16px;
   box-shadow: 0 10px 28px rgba(0, 0, 0, .18);
-  transition: translate .3s var(--ease), box-shadow .3s;
+  transition: box-shadow .3s;
 }
-.client-card:hover { translate: 0 -6px; box-shadow: 0 20px 40px rgba(0, 0, 0, .28); }
-.client-card__logo { width: 100%; height: 84px; display: flex; align-items: center; justify-content: center; border-radius: 10px; }
+/* Hover: an orange line draws across the bottom, the logo grows a little
+   and the name turns blue. The card itself stays in place. */
+.client-card::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 0;
+  height: 4px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .4s var(--ease);
+}
+.client-card:hover { box-shadow: 0 18px 38px rgba(0, 0, 0, .26); }
+.client-card:hover::after { transform: scaleX(1); }
+.client-card__logo { width: 100%; height: 84px; display: flex; align-items: center; justify-content: center; border-radius: 10px; transition: transform .4s var(--ease); }
+.client-card:hover .client-card__logo { transform: scale(1.06); }
 .client-card__logo img[data-slot] { width: auto; max-width: 100%; height: 100%; object-fit: contain; }
 .client-card__logo.no-photo { background: var(--cloud); background-image: none; }
 .client-card__logo.no-photo::after { content: "Logo"; font: 600 12px/1 var(--font-body); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
-.client-card__name { font: 600 16px/1.3 var(--font-head); color: var(--navy); text-align: center; }
+.client-card__name { font: 600 16px/1.3 var(--font-head); color: var(--navy); text-align: center; transition: color .3s; }
+.client-card:hover .client-card__name { color: var(--blue); }
 @media (max-width: 600px) { .client-grid { grid-template-columns: 1fr 1fr; gap: 14px; } .client-card { padding: 20px 12px 16px; } .client-card__logo { height: 64px; } }
 
 /* Orange timer bar along the bottom of the gallery photo (fills, then the next photo shows) */
