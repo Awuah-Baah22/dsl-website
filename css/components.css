@@ -204,7 +204,7 @@ a:hover .link-arrow .icon { transform: translateX(4px); }
    5. ADVISORY CARDS (Services)
    Layout (desktop): one tall card on the left; on the right two cards
    side by side, with one wide card (.advisory-card--wide) underneath.
-   Text sits straight on the photo, in --advisory-text.
+   Heading and "View more" use --advisory-text; the hover description stays light.
    Hover reveals the description (always shown on the big card and on phones).
    --------------------------------------------------------------------- */
 .advisory-grid { display: grid; grid-template-columns: 1.25fr 1fr 1fr; grid-auto-rows: 310px; gap: 24px; }
@@ -231,12 +231,13 @@ a:hover .link-arrow .icon { transform: translateX(4px); }
 .advisory-card__media.glow-blue   { --glow: radial-gradient(circle at 100% 0%, rgba(21, 89, 237, .85), transparent 60%); }
 .advisory-card__media.glow-orange { --glow: radial-gradient(circle at 100% 0%, rgba(232, 128, 26, .7), transparent 60%); }
 
-/* Text sits straight on the photo, in one dark colour (set here) */
-.advisory-grid { --advisory-text: #151B14; }
+/* Text sits straight on the photo. Heading and "View more" use one colour (set here);
+   the hover description keeps its original light colour. */
+.advisory-grid { --advisory-text: #151B54; }
 .advisory-card__body { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: 0 32px 30px; display: flex; flex-direction: column; }
-.advisory-card h3 { color: var(--advisory-text); font-size: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--advisory-text); }
+.advisory-card h3 { color: var(--advisory-text); font-size: 24px; padding-bottom: 18px; border-bottom: 1px solid rgba(255, 255, 255, .35); }
 .advisory-card.is-big h3 { font-size: 34px; }
-.advisory-card__text { max-height: 0; opacity: 0; overflow: hidden; font-size: 17px; line-height: 1.65; color: var(--advisory-text); transition: max-height .4s, opacity .3s, margin .4s; }
+.advisory-card__text { max-height: 0; opacity: 0; overflow: hidden; font-size: 17px; line-height: 1.65; color: var(--line); transition: max-height .4s, opacity .3s, margin .4s; }
 .advisory-card:hover .advisory-card__text,
 .advisory-card:focus-visible .advisory-card__text,
 .advisory-card.is-big .advisory-card__text { max-height: 160px; opacity: 1; margin-top: 22px; }
