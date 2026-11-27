@@ -434,7 +434,7 @@
   color: rgba(255, 255, 255, .07);
   pointer-events: none;
 }
-.purpose-card__head { display: flex; align-items: center; gap: 14px; }
+.purpose-card__head { display: flex; align-items: center; gap: 16px; }
 .purpose-card__icon {
   width: 48px; height: 48px; flex: none;
   display: inline-flex; align-items: center; justify-content: center;
@@ -442,7 +442,9 @@
   background: rgba(255, 255, 255, .10);
   color: var(--accent);
 }
-.purpose-card h3 { color: var(--accent); font: 600 14px/1 var(--font-body); letter-spacing: .18em; text-transform: uppercase; }
+/* Card title: white heading with a short accent underline */
+.purpose-card h3 { position: relative; padding-bottom: 12px; color: var(--white); font: 700 26px/1.1 var(--font-head); }
+.purpose-card h3::after { content: ""; position: absolute; left: 0; bottom: 0; width: 40px; height: 3px; border-radius: 3px; background: var(--accent); }
 .purpose-card__statement { position: relative; font: 700 21px/1.5 var(--font-head); color: var(--white); }
 .purpose-card--vision .purpose-card__statement { font-size: 28px; line-height: 1.35; margin-block: auto; }   /* shorter text: larger, centred in the card */
 @media (max-width: 900px) { .purpose-cards { grid-template-columns: 1fr; max-width: 620px; } }
@@ -450,6 +452,7 @@
   .purpose-card { padding: 30px 24px 34px; gap: 20px; }
   .purpose-card::after { left: 24px; right: 24px; }
   .purpose-card__num { font-size: 88px; right: 16px; }
+  .purpose-card h3 { font-size: 22px; }
   .purpose-card__statement { font-size: 18px; }
   .purpose-card--vision .purpose-card__statement { font-size: 22px; }
 }
