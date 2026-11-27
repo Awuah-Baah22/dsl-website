@@ -52,7 +52,7 @@ site/
 | Link a Siemens product | `siemens.html`, change `href="#"` on that `product-card` |
 | Change "View the product range" | `siemens.html`, the comment `PRODUCT RANGE LINK` |
 | Add a gallery photo | `projects.html`, copy one `gallery__thumb` button |
-| Change the stats numbers | `data-count="47"` and the number next to it, on **Home and Projects** |
+| Change the stats numbers | `data-count="47"` and the number next to it, on the **Projects** page |
 | Add a policy PDF | Put it in `policies/` with the name used in `about.html` |
 
 ## Useful classes
