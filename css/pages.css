@@ -333,6 +333,9 @@
 
 /* ---- 5a. ENI Ghana ---- */
 .eni__head { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 32px 56px; }
+/* "Our Featured ENI Ghana Projects": small heading above the project cards, with an orange line */
+.eni__subhead { display: flex; align-items: center; gap: 14px; margin-top: 8px; font-size: 24px; color: var(--navy); }
+.eni__subhead::before { content: ""; width: 32px; height: 3px; border-radius: 3px; background: var(--orange); }
 
 .work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .work-card { display: flex; flex-direction: column; overflow: hidden; background: var(--white); border: 1px solid var(--line); border-radius: 16px; text-decoration: none; transition: translate .25s, box-shadow .25s, border-color .25s; }
