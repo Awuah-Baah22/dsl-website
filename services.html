@@ -81,7 +81,7 @@
   <section class="photo-hero">
     <div class="photo-hero__bg" aria-hidden="true">
       <img class="photo-hero__fallback" src="images/illustrations/services-hero.svg" alt="">
-      <img data-slot src="images/services/panel-breaker-2.jpg" alt="">
+      <img data-slot fetchpriority="high" src="images/services/panel-breaker-2.jpg" alt="">
     </div>
     <div class="photo-hero__shade" aria-hidden="true"></div>
 
@@ -169,7 +169,6 @@
       <div class="advisory-grid">
         <a class="advisory-card is-big reveal" href="contact.html">
           <div class="advisory-card__media glow-blue"><img data-slot src="images/services/supply chain.jpg" alt="" loading="lazy"></div>
-          <div class="advisory-card__shade"></div>
           <div class="advisory-card__body">
             <h3>Supply Chain and Procurement Solutions</h3>
             <p class="advisory-card__text">Sourcing, logistics and compliant procurement.</p>
@@ -179,7 +178,6 @@
 
         <a class="advisory-card reveal" href="contact.html">
           <div class="advisory-card__media glow-orange"><img data-slot src="images/services/business-development.jpg" alt="" loading="lazy"></div>
-          <div class="advisory-card__shade"></div>
           <div class="advisory-card__body">
             <h3>Business Development</h3>
             <p class="advisory-card__text">Opportunity identification, partnerships and market expansion.</p>
@@ -188,18 +186,7 @@
         </a>
 
         <a class="advisory-card reveal" href="contact.html">
-          <div class="advisory-card__media glow-teal"><img data-slot src="images/services/business-intelligence-and-market-research.jpg" alt="" loading="lazy"></div>
-          <div class="advisory-card__shade"></div>
-          <div class="advisory-card__body">
-            <h3>Business Intelligence and Market Research</h3>
-            <p class="advisory-card__text">Data-driven market analysis to guide decisions.</p>
-            <span class="advisory-card__more">View more <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-          </div>
-        </a>
-
-        <a class="advisory-card reveal" href="contact.html">
           <div class="advisory-card__media glow-blue"><img data-slot src="images/services/regulatory-compliance.jpg" alt="" loading="lazy"></div>
-          <div class="advisory-card__shade"></div>
           <div class="advisory-card__body">
             <h3>Regulatory Compliance</h3>
             <p class="advisory-card__text">Adherence to local and international standards.</p>
@@ -207,9 +194,8 @@
           </div>
         </a>
 
-        <a class="advisory-card reveal" href="contact.html">
+        <a class="advisory-card advisory-card--wide reveal" href="contact.html">
           <div class="advisory-card__media glow-orange"><img data-slot src="images/services/consulting (1).jpg" alt="" loading="lazy"></div>
-          <div class="advisory-card__shade"></div>
           <div class="advisory-card__body">
             <h3>Consulting</h3>
             <p class="advisory-card__text">Tailored advisory services for your project.</p>
@@ -224,10 +210,9 @@
   <!-- ================================================================
        SUPPORT SERVICES SLIDER
        Arrows and dots: js/pages/services.js (dots are made automatically).
-       Maintenance and support card also shows FUMIGATION:
-         - computer: hover the card
-         - phone: tap "Includes fumigation"
-       Fumigation photo: images/services/fumigation.jpg
+       Maintenance and support card: its photos slide in from the right every
+       3 seconds (Maintenance -> Fumigation -> ...). Add a slide by copying
+       one support-card__layer inside support-card__reel. Timing: services.js
        ================================================================ -->
   <section class="section support-slider-section" id="support">
     <div class="container stack">
@@ -250,28 +235,29 @@
             </div>
           </article>
 
-          <!-- Maintenance and support (with Fumigation inside) -->
+          <!-- Maintenance and support: photos slide in from the right every 3 seconds -->
           <article class="support-card support-card--combo">
-            <!-- Layer 1: Maintenance and support -->
-            <div class="support-card__layer">
-              <div class="support-card__media photo-placeholder"><img data-slot src="images/services/hero-option-1.jpg" alt="Maintenance and support" loading="lazy"></div>
-              <div class="support-card__shade"></div>
-              <div class="support-card__body">
-                <h3>Maintenance and support</h3>
-                <p>Troubleshooting, spares procurement, corrosion control, repair and refurbishment, painting, welding and civil works.</p>
+            <div class="support-card__reel">
+              <!-- Slide 1: Maintenance and support -->
+              <div class="support-card__layer">
+                <div class="support-card__media photo-placeholder"><img data-slot src="images/services/hero-option-1.jpg" alt="Maintenance and support" loading="lazy"></div>
+                <div class="support-card__shade"></div>
+                <div class="support-card__body">
+                  <h3>Maintenance and support</h3>
+                  <p>Troubleshooting, spares procurement, corrosion control, repair and refurbishment, painting, welding and civil works.</p>
+                </div>
+              </div>
+              <!-- Slide 2: Fumigation -->
+              <div class="support-card__layer support-card__layer--fumigation">
+                <div class="support-card__media photo-placeholder"><img data-slot src="images/services/fumigation -2.jpg" alt="Fumigation" loading="lazy"></div>
+                <div class="support-card__shade"></div>
+                <div class="support-card__body">
+                  <span class="eyebrow">Part of maintenance and support</span>
+                  <h3>Fumigation</h3>
+                  <p>Pest and reptile control that keeps offices, warehouses and site facilities safe and hygienic.</p>
+                </div>
               </div>
             </div>
-            <!-- Layer 2: Fumigation (wipes in on hover / tap) -->
-            <div class="support-card__layer support-card__layer--fumigation">
-              <div class="support-card__media photo-placeholder"><img data-slot src="images/services/fumigation -2.jpg" alt="Fumigation" loading="lazy"></div>
-              <div class="support-card__shade"></div>
-              <div class="support-card__body">
-                <span class="eyebrow">Part of maintenance and support</span>
-                <h3>Fumigation</h3>
-                <p>Pest and reptile control that keeps offices, warehouses and site facilities safe and hygienic.</p>
-              </div>
-            </div>
-            <button class="support-card__hint" type="button" aria-pressed="false"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8a4 4 0 018 0v6a4 4 0 01-8 0zM12 8v10M4 10h4M16 10h4M4 16h4M16 16h4M9 4l1.5 2M15 4l-1.5 2"/></svg> Includes fumigation</button>
           </article>
 
           <!-- Manpower -->

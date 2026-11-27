@@ -167,7 +167,10 @@
 .photo-hero { position: relative; min-height: min(720px, 85vh); display: flex; align-items: center; overflow: hidden; background: var(--navy-deep); color: #C9D4E0; }
 .photo-hero__bg { position: absolute; inset: 0; }
 .photo-hero__bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.photo-hero__bg.has-photo .photo-hero__fallback { display: none; }
+/* The drawing is only a stand-in for a MISSING photo. While the photo loads,
+   the navy background shows instead, so visitors never see the drawing flash first. */
+.photo-hero__fallback { display: none; }
+.photo-hero__bg.no-photo .photo-hero__fallback { display: block; }
 .photo-hero__shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11, 22, 38, .95) 0%, rgba(11, 22, 38, .75) 45%, rgba(11, 22, 38, .2) 100%); }
 .photo-hero__inner { position: relative; z-index: 2; width: 100%; padding-top: 96px; padding-bottom: 96px; }
 .photo-hero__text { max-width: 680px; display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
@@ -219,39 +222,16 @@
 .support-card h3 { color: var(--white); font-size: 32px; line-height: 1.15; }
 .support-card p { font-size: 16.5px; line-height: 1.6; color: #D5DEE6; }
 
-/* Maintenance and support + Fumigation (two cards in one)
-   Hover (or tap on phones) wipes the fumigation layer in from the corner. */
-.support-card__layer { position: absolute; inset: 0; }
-.support-card__layer--fumigation {
-  z-index: 3;
-  clip-path: circle(0% at 100% 0%);
-  transition: clip-path .9s var(--ease);
-}
-.support-card--combo:hover .support-card__layer--fumigation,
-.support-card--combo:focus-within .support-card__layer--fumigation,
-.support-card--combo.is-flipped .support-card__layer--fumigation { clip-path: circle(150% at 100% 0%); }
+/* Maintenance and support: horizontal photo reel
+   The slides sit side by side; services.js moves the row left one card
+   width at a time, then moves the slide that just left to the end,
+   so it always slides in from the right in a loop. */
+.support-card__reel { position: absolute; inset: 0; display: flex; transition: transform .8s var(--ease); }
+.support-card__layer { position: relative; flex: 0 0 100%; }
 .support-card__layer--fumigation .support-card__media { background-color: #0E3B2E; }   /* green-tinted placeholder */
 .support-card__layer--fumigation .support-card__shade { background: linear-gradient(180deg, rgba(6, 30, 22, .45) 0%, rgba(6, 30, 22, 0) 35%, rgba(6, 30, 22, .92) 78%, #061E16 100%); }
 .support-card__layer--fumigation .support-card__body::before { background: #3CCB7F; }
 .support-card__layer--fumigation .eyebrow { color: #7BE3A9; }
-.support-card__hint {
-  position: absolute; right: 22px; top: 22px; z-index: 4;
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 10px 14px;
-  border: 1px solid rgba(255, 255, 255, .35);
-  border-radius: 999px;
-  background: rgba(11, 22, 38, .55);
-  backdrop-filter: blur(6px);
-  color: var(--white);
-  font: 600 13px/1 var(--font-body);
-  cursor: pointer;
-  transition: background-color .3s, color .3s;
-}
-.support-card__hint .icon { color: #7BE3A9; }
-.support-card--combo:hover .support-card__hint,
-.support-card--combo.is-flipped .support-card__hint { background: #3CCB7F; border-color: #3CCB7F; color: #06261A; }
-.support-card--combo:hover .support-card__hint .icon,
-.support-card--combo.is-flipped .support-card__hint .icon { color: #06261A; }
 
 /* Slider controls */
 .support-slider__controls { display: flex; align-items: center; justify-content: center; gap: 28px; margin-top: 8px; }
