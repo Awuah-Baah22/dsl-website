@@ -176,8 +176,6 @@
 .photo-hero h1 { color: var(--white); font-size: 64px; line-height: 1.04; letter-spacing: -.02em; }
 .photo-hero h1 span { color: var(--orange); }
 .photo-hero p { font-size: 19px; line-height: 1.7; max-width: 580px; text-align: justify; }
-.photo-hero__chips { display: flex; flex-wrap: wrap; gap: 10px; }
-.photo-hero__chips span { padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, .25); background: rgba(255, 255, 255, .08); font: 600 13.5px/1 var(--font-body); color: #E1E8ED; }
 
 @media (max-width: 1024px) { .photo-hero h1 { font-size: 50px; } }
 @media (max-width: 600px) {
@@ -227,6 +225,10 @@
    so it always slides in from the right in a loop. */
 .support-card__reel { position: absolute; inset: 0; display: flex; transition: transform .8s var(--ease); }
 .support-card__layer { position: relative; flex: 0 0 100%; }
+/* Carousel dots (made by services.js): one per photo, the current one is a longer orange bar */
+.support-card__dots { position: absolute; right: 24px; top: 24px; z-index: 3; display: flex; gap: 6px; }
+.support-card__dots span { width: 8px; height: 8px; border-radius: 999px; background: rgba(255, 255, 255, .55); transition: width .4s var(--ease), background .4s; }
+.support-card__dots span.is-active { width: 24px; background: var(--orange); }
 .support-card__layer--fumigation .support-card__media { background-color: #0E3B2E; }   /* green-tinted placeholder */
 .support-card__layer--fumigation .support-card__shade { background: linear-gradient(180deg, rgba(6, 30, 22, .45) 0%, rgba(6, 30, 22, 0) 35%, rgba(6, 30, 22, .92) 78%, #061E16 100%); }
 .support-card__layer--fumigation .support-card__body::before { background: #3CCB7F; }
@@ -251,7 +253,11 @@
 
 /* ---- 3c. Siemens partner band ---- */
 .partner-band { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px; padding: 48px 52px; border-radius: var(--radius); background: var(--siemens-navy); color: #C9D4E0; position: relative; overflow: hidden; }
-.partner-band::before { content: ""; position: absolute; right: -80px; top: -80px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(0, 230, 220, .3), transparent 70%); }
+.partner-band::before { content: ""; position: absolute; right: -80px; top: -80px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(0, 230, 220, .3), transparent 70%); animation: partner-glow 10s ease-in-out infinite alternate; }
+/* The glow drifts slowly so the band feels alive without being busy */
+@keyframes partner-glow { to { transform: translate(-140px, 90px) scale(1.15); } }
+@media (prefers-reduced-motion: reduce) { .partner-band::before { animation: none; } }
+.section--partner { padding-block: 72px; }
 .partner-band__text { position: relative; flex: 1 1 520px; display: flex; flex-direction: column; gap: 14px; }
 .partner-band .eyebrow { color: var(--siemens-mint); }
 .partner-band h2 { color: var(--white); font-size: 34px; line-height: 1.2; }
