@@ -204,7 +204,7 @@ a:hover .link-arrow .icon { transform: translateX(4px); }
    5. ADVISORY CARDS (Services)
    Layout (desktop): one tall card on the left; on the right two cards
    side by side, with one wide card (.advisory-card--wide) underneath.
-   Heading and "View more" use --advisory-text; the hover description stays light.
+   White text on a dark fade over the photo.
    Hover reveals the description (always shown on the big card and on phones).
    --------------------------------------------------------------------- */
 .advisory-grid { display: grid; grid-template-columns: 1.25fr 1fr 1fr; grid-auto-rows: 310px; gap: 24px; }
@@ -231,9 +231,15 @@ a:hover .link-arrow .icon { transform: translateX(4px); }
 .advisory-card__media.glow-blue   { --glow: radial-gradient(circle at 100% 0%, rgba(21, 89, 237, .85), transparent 60%); }
 .advisory-card__media.glow-orange { --glow: radial-gradient(circle at 100% 0%, rgba(232, 128, 26, .7), transparent 60%); }
 
-/* Text sits straight on the photo. Heading and "View more" use one colour (set here);
-   the hover description keeps its original light colour. */
-.advisory-grid { --advisory-text: #151B54; }
+/* Dark fade over the bottom of the photo so the white text is readable.
+   (.advisory-card__media has isolation, so the photo stays underneath this.) */
+.advisory-grid { --advisory-text: var(--white); }
+.advisory-card__shade {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(0deg, rgba(8, 16, 32, .96) 0%, rgba(8, 16, 32, .7) 45%, rgba(8, 16, 32, .15) 100%);
+  transition: background .3s;
+}
+.advisory-card:hover .advisory-card__shade { background: linear-gradient(0deg, rgba(8, 16, 32, .97) 0%, rgba(8, 16, 32, .9) 70%, rgba(8, 16, 32, .55) 100%); }
 .advisory-card__body { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: 0 32px 30px; display: flex; flex-direction: column; }
 .advisory-card h3 { color: var(--advisory-text); font-size: 24px; padding-bottom: 18px; border-bottom: 1px solid rgba(255, 255, 255, .35); }
 .advisory-card.is-big h3 { font-size: 34px; }
