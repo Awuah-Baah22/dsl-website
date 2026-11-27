@@ -1,7 +1,7 @@
 /* =====================================================================
    SERVICES.JS  -  Services page only
       1. Support services slider (arrows, dots, swipe)
-      2. Maintenance and support card: tap to show Fumigation on phones
+      2. Maintenance and support card: photos slide up every 3 seconds
    ===================================================================== */
 (function () {
   'use strict';
@@ -48,17 +48,49 @@
   }
 
   /* -------------------------------------------------------------------
-     2. MAINTENANCE AND SUPPORT + FUMIGATION
-     On a computer, hovering the card shows Fumigation (CSS).
-     On phones there is no hover, so tapping the "Includes fumigation"
-     button switches between the two.
+     2. MAINTENANCE AND SUPPORT: VERTICAL PHOTO REEL
+     Every 3 seconds the reel moves up by one slide. When the move ends,
+     the slide that went off the top is moved to the bottom and the reel
+     is put back in place without animation, so the loop never jumps.
+     Pauses while the mouse is over the card (so people can read it)
+     and while the browser tab is hidden.
      ------------------------------------------------------------------- */
+  var SLIDE_DELAY = 3000;   // time each photo stays on screen (ms)
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   document.querySelectorAll('.support-card--combo').forEach(function (card) {
-    var btn = card.querySelector('.support-card__hint');
-    if (!btn) return;
-    btn.addEventListener('click', function () {
-      var on = card.classList.toggle('is-flipped');
-      btn.setAttribute('aria-pressed', String(on));
+    var reel = card.querySelector('.support-card__reel');
+    if (!reel || reel.children.length < 2) return;
+
+    var timer = null, hovering = false;
+
+    function schedule() {
+      clearTimeout(timer);
+      timer = setTimeout(next, SLIDE_DELAY);
+    }
+
+    function next() {
+      if (hovering || document.hidden) { schedule(); return; }
+      if (reduceMotion) { moveFirstToEnd(); schedule(); return; }   // switch without sliding
+      reel.style.transform = 'translateY(-100%)';
+    }
+
+    function moveFirstToEnd() {
+      reel.appendChild(reel.firstElementChild);
+    }
+
+    reel.addEventListener('transitionend', function (e) {
+      if (e.target !== reel) return;          // ignore transitions inside the slides
+      reel.style.transition = 'none';
+      moveFirstToEnd();
+      reel.style.transform = '';
+      void reel.offsetHeight;                 // apply the reset before turning animation back on
+      reel.style.transition = '';
+      schedule();
     });
+
+    card.addEventListener('mouseenter', function () { hovering = true; });
+    card.addEventListener('mouseleave', function () { hovering = false; });
+    schedule();
   });
 })();
