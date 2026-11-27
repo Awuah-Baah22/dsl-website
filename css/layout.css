@@ -187,8 +187,12 @@
 .footer__col h4 { color: var(--white); font-size: 17px; margin-bottom: 6px; }
 .footer__col a, .footer__line { color: #C9D4E0; text-decoration: none; line-height: 1.6; }
 .footer__col a:hover { color: var(--white); }
-.footer__line { display: flex; gap: 12px; align-items: flex-start; }
-.footer__line .icon { color: var(--orange); margin-top: 3px; }
+/* Icon lines (phone, email, address): icon on the left, text beside it */
+.site-footer { --footer-icon: 18px; --footer-icon-gap: 12px; }
+.footer__line { display: flex; gap: var(--footer-icon-gap); align-items: flex-start; }
+.footer__line .icon { width: var(--footer-icon); height: var(--footer-icon); color: var(--orange); margin-top: 3px; }
+/* Office headings start where the text starts, not where the icon starts */
+.footer__col--office h4 { padding-left: calc(var(--footer-icon) + var(--footer-icon-gap)); }
 .footer__social { display: flex; gap: 10px; }
 .social-btn {
   width: 40px; height: 40px;
