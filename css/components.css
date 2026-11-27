@@ -22,6 +22,7 @@
    Scrolls by itself; visitors can also drag / swipe it back and forth.
    When they let go, it carries on scrolling (js/main.js, "Logo strips").
    - A logo shows when its image file exists, otherwise the name shows.
+   - All logos share one height; set it with --logo-h.
    - Add data-direction="right" to make a strip move the other way.
    --------------------------------------------------------------------- */
 .logo-strip {
@@ -33,26 +34,31 @@
 }
 .logo-strip::-webkit-scrollbar { display: none; }
 .logo-strip.is-dragging { cursor: grabbing; }
-.logo-strip__track { display: flex; gap: 48px; width: max-content; padding: 8px 0; }
+/* Every logo is shown at the same height (--logo-h) in full colour; its width
+   follows the logo's own shape, so nothing is stretched. Logo files should have
+   no empty margins around them, otherwise they look smaller than the rest. */
+.logo-strip { --logo-h: 64px; }
+.logo-strip__track { display: flex; align-items: center; gap: 64px; width: max-content; padding: 12px 0; }
 .logo-strip__item {
-  flex: 0 0 180px;
-  min-height: 90px;
+  flex: 0 0 auto;
+  min-width: 140px;                    /* room for the company name when the logo is missing */
+  height: calc(var(--logo-h) + 24px);
   display: flex; align-items: center; justify-content: center;
-  padding: 0 8px;
   font: 700 16px/1.25 var(--font-head);
   color: var(--text-soft);
   text-align: center;
   user-select: none;
 }
-.logo-strip__img { display: none; max-width: 100%; max-height: 64px; object-fit: contain; filter: grayscale(1); opacity: .75; transition: filter .3s, opacity .3s; -webkit-user-drag: none; }
+.logo-strip__item.has-logo { min-width: 0; }
+.logo-strip__img { display: none; height: var(--logo-h); width: auto; max-width: none; -webkit-user-drag: none; }
 .logo-strip__item.has-logo .logo-strip__img { display: block; }   /* logo loaded -> show it */
 .logo-strip__item.has-logo span { display: none; }                /* ...and hide the name */
-.logo-strip__item:hover .logo-strip__img { filter: none; opacity: 1; }
-.logo-strip + .logo-strip { margin-top: 14px; }
+.logo-strip + .logo-strip { margin-top: 18px; }
 
 @media (max-width: 600px) {
-  .logo-strip__item { flex-basis: 140px; }
-  .logo-strip__track { gap: 32px; }
+  .logo-strip { --logo-h: 46px; }
+  .logo-strip__track { gap: 40px; }
+  .logo-strip__item { min-width: 110px; }
 }
 
 
@@ -86,6 +92,19 @@
   display: flex; flex-direction: column; justify-content: flex-end; gap: 12px;
 }
 .photo-card h3 { color: var(--white); font-size: 28px; }
+/* Small badge in the top-left corner of a card (e.g. "Authorised Siemens Partner") */
+.photo-card__tag {
+  position: absolute; left: 24px; top: 24px; z-index: 1;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: rgba(11, 22, 38, .72);
+  border: 1px solid rgba(255, 255, 255, .22);
+  backdrop-filter: blur(6px);
+  color: var(--white);
+  font: 600 13.5px/1 var(--font-body);
+}
+.photo-card__tag .icon { color: var(--orange); }
 .photo-card p { color: var(--line); max-width: 560px; }
 .link-arrow { display: inline-flex; align-items: center; gap: 8px; font: 600 15px/1 var(--font-body); color: var(--orange); }
 .link-arrow .icon { transition: transform .25s; }
