@@ -55,7 +55,12 @@
      Pauses while the mouse is over the card (so people can read it)
      and while the browser tab is hidden.
      ------------------------------------------------------------------- */
-  var SLIDE_DELAY = 3000;   // time each photo stays on screen (ms)
+  // A new photo arrives every 3 seconds: it rests for HOLD_TIME, then the
+  // slide itself takes SLIDE_TIME (keep SLIDE_TIME equal to the transition
+  // on .support-card__reel in pages.css).
+  var CHANGE_EVERY = 3000;
+  var SLIDE_TIME = 800;
+  var HOLD_TIME = CHANGE_EVERY - SLIDE_TIME;
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   document.querySelectorAll('.support-card--combo').forEach(function (card) {
@@ -66,7 +71,7 @@
 
     function schedule() {
       clearTimeout(timer);
-      timer = setTimeout(next, SLIDE_DELAY);
+      timer = setTimeout(next, reduceMotion ? CHANGE_EVERY : HOLD_TIME);
     }
 
     function next() {
