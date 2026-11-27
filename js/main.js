@@ -9,9 +9,8 @@
       4. Photo slots (img[data-slot])
       5. Logo strips (auto-scroll + drag)
       6. Drag-to-scroll rows (Siemens products)
-      7. Count-up numbers ([data-count])
-      8. Back to top button and footer year
-      9. Contact form (validation, appointment fields, Netlify)
+      7. Back to top button and footer year
+      8. Contact form (validation, appointment fields, Netlify)
    ===================================================================== */
 (function () {
   'use strict';
@@ -123,8 +122,9 @@
   /* -------------------------------------------------------------------
      5. LOGO STRIPS
      - Moves by itself (slowly).
+     - Keeps moving at the same pace when the mouse is over it.
      - Visitors can drag with the mouse or swipe with a finger, back
-       and forth. When they let go and move away, it keeps going.
+       and forth. When they let go, it carries on by itself.
      - data-direction="right" makes a strip move the other way.
      The list of logos is copied once so it can loop without a gap.
      ------------------------------------------------------------------- */
@@ -152,7 +152,7 @@
 
     var speed = 0.5 * (strip.dataset.direction === 'right' ? -1 : 1); // pixels per frame
     var pos = 0;                 // exact position (scrollLeft only keeps whole pixels)
-    var paused = false;          // true while the visitor is touching / dragging / hovering
+    var paused = false;          // true while the visitor is dragging or touching
     var dragging = false, startX = 0, startPos = 0, resumeTimer = null;
 
     function half() { return track.scrollWidth / 2; }
@@ -202,9 +202,9 @@
     strip.addEventListener('pointerup', endDrag);
     strip.addEventListener('pointercancel', endDrag);
 
-    // Hover pauses on desktop; leaving resumes
-    strip.addEventListener('mouseenter', pause);
-    strip.addEventListener('mouseleave', function () { endDrag(); resumeSoon(); });
+    // Hovering does not pause it: the strip keeps its pace until someone drags.
+    // Leaving the strip mid-drag ends the drag.
+    strip.addEventListener('mouseleave', endDrag);
 
     // Touch: let the phone scroll natively, then pick up from where it stopped
     strip.addEventListener('touchstart', pause, { passive: true });
@@ -250,31 +250,7 @@
 
 
   /* -------------------------------------------------------------------
-     7. COUNT-UP NUMBERS
-     <span data-count="47">47</span> counts from 0 to 47 when seen.
-     ------------------------------------------------------------------- */
-  var counters = document.querySelectorAll('[data-count]');
-  if (counters.length && 'IntersectionObserver' in window && !reduceMotion) {
-    var countObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        var el = entry.target, end = parseInt(el.dataset.count, 10) || 0, start = null;
-        function step(t) {
-          if (!start) start = t;
-          var p = Math.min((t - start) / 1600, 1);
-          el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));  // ease-out
-          if (p < 1) requestAnimationFrame(step);
-        }
-        requestAnimationFrame(step);
-        countObserver.unobserve(el);
-      });
-    }, { threshold: 0.5 });
-    counters.forEach(function (el) { el.textContent = '0'; countObserver.observe(el); });
-  }
-
-
-  /* -------------------------------------------------------------------
-     8. BACK TO TOP BUTTON AND FOOTER YEAR
+     7. BACK TO TOP BUTTON AND FOOTER YEAR
      ------------------------------------------------------------------- */
   var toTop = document.querySelector('.to-top');
   if (toTop) {
@@ -289,7 +265,7 @@
 
 
   /* -------------------------------------------------------------------
-     9. CONTACT FORM
+     8. CONTACT FORM
      - Checks the required fields before sending.
      - "Book an appointment" shows the date / time / office fields.
        Links ending in ?book open the form with these fields already showing.

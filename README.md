@@ -20,7 +20,7 @@ site/
 ├── css/
 │   ├── base.css        Colours, fonts, buttons, sections, photo slots, scroll animation
 │   ├── layout.css      Header, menu, footer
-│   ├── components.css  Reusable blocks (stats, logo strip, cards, testimonials, gallery, form ...)
+│   ├── components.css  Reusable blocks (logo strip, cards, testimonials, gallery, form ...)
 │   └── pages.css       Sections that belong to one page
 │
 ├── js/
@@ -52,7 +52,6 @@ site/
 | Link a Siemens product | `siemens.html`, change `href="#"` on that `product-card` |
 | Change "View the product range" | `siemens.html`, the comment `PRODUCT RANGE LINK` |
 | Add a gallery photo | `projects.html`, copy one `gallery__thumb` button |
-| Change the stats numbers | `data-count="47"` and the number next to it, on **Home and Projects** |
 | Add a policy PDF | Put it in `policies/` with the name used in `about.html` |
 
 ## Useful classes

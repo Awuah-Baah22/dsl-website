@@ -220,10 +220,13 @@ img[data-slot] {
 
 /* ---------------------------------------------------------------------
    7. SCROLL-IN ANIMATION
-   Add class="reveal" to anything that should fade up into view.
+   Add class="reveal" to anything that should fade up into view
+   (add reveal--from-left / reveal--from-right to slide in sideways).
    Cards in the same row appear one after another (js/main.js sets --delay).
    --------------------------------------------------------------------- */
 .js .reveal { opacity: 0; transform: translateY(32px); }
+.js .reveal--from-left  { transform: translateX(-56px); }   /* slides in from the left instead */
+.js .reveal--from-right { transform: translateX(56px); }    /* slides in from the right instead */
 .js .reveal.is-visible {
   opacity: 1;
   transform: none;
