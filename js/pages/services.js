@@ -1,7 +1,7 @@
 /* =====================================================================
    SERVICES.JS  -  Services page only
       1. Support services slider (arrows, dots, swipe)
-      2. Maintenance and support card: photos slide up every 3 seconds
+      2. Maintenance and support card: photos slide in from the right every 3 seconds
    ===================================================================== */
 (function () {
   'use strict';
@@ -48,9 +48,9 @@
   }
 
   /* -------------------------------------------------------------------
-     2. MAINTENANCE AND SUPPORT: VERTICAL PHOTO REEL
-     Every 3 seconds the reel moves up by one slide. When the move ends,
-     the slide that went off the top is moved to the bottom and the reel
+     2. MAINTENANCE AND SUPPORT: HORIZONTAL PHOTO REEL
+     Every 3 seconds the reel moves left by one slide. When the move ends,
+     the slide that went off the left is moved to the end and the reel
      is put back in place without animation, so the loop never jumps.
      Pauses while the mouse is over the card (so people can read it)
      and while the browser tab is hidden.
@@ -77,7 +77,7 @@
     function next() {
       if (hovering || document.hidden) { schedule(); return; }
       if (reduceMotion) { moveFirstToEnd(); schedule(); return; }   // switch without sliding
-      reel.style.transform = 'translateY(-100%)';
+      reel.style.transform = 'translateX(-100%)';
     }
 
     function moveFirstToEnd() {
