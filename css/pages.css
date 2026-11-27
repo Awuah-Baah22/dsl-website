@@ -43,7 +43,7 @@
 .page-hero__text { display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
 .page-hero h1 { color: var(--white); font-size: 58px; line-height: 1.06; letter-spacing: -.02em; }
 .page-hero h1 em { font-style: normal; color: var(--orange); }
-.page-hero__lead { font-size: 19px; line-height: 1.7; max-width: 620px; }
+.page-hero__lead { font-size: 19px; line-height: 1.7; max-width: 620px; text-align: justify; }
 .page-hero__art img { width: 100%; height: auto; display: block; }
 
 @media (max-width: 1024px) {
@@ -92,7 +92,7 @@
 .home-hero__badge .icon { color: var(--orange); }
 .home-hero h1 { color: var(--white); font-size: 72px; line-height: 1.02; letter-spacing: -.025em; }
 .home-hero h1 span { color: var(--orange); }
-.home-hero p { font-size: 19px; line-height: 1.7; max-width: 620px; }
+.home-hero p { font-size: 19px; line-height: 1.7; max-width: 620px; text-align: justify; }
 
 /* Slide dots (one per photo, the active one fills orange) */
 .home-hero__dots { position: absolute; right: 32px; bottom: 150px; z-index: 3; display: flex; gap: 8px; }
@@ -175,7 +175,7 @@
 .photo-hero__text { max-width: 680px; display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
 .photo-hero h1 { color: var(--white); font-size: 64px; line-height: 1.04; letter-spacing: -.02em; }
 .photo-hero h1 span { color: var(--orange); }
-.photo-hero p { font-size: 19px; line-height: 1.7; max-width: 580px; }
+.photo-hero p { font-size: 19px; line-height: 1.7; max-width: 580px; text-align: justify; }
 .photo-hero__chips { display: flex; flex-wrap: wrap; gap: 10px; }
 .photo-hero__chips span { padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, .25); background: rgba(255, 255, 255, .08); font: 600 13.5px/1 var(--font-body); color: #E1E8ED; }
 

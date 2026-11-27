@@ -176,7 +176,7 @@
 .footer__grid {
   display: grid;
   grid-template-columns: 1.3fr 1fr 1.1fr 1.1fr;
-  gap: 48px 56px;
+  gap: 48px 40px;
   padding-top: 72px;
   padding-bottom: 56px;
 }
@@ -191,6 +191,9 @@
 .site-footer { --footer-icon: 18px; --footer-icon-gap: 12px; }
 .footer__line { display: flex; gap: var(--footer-icon-gap); align-items: flex-start; }
 .footer__line .icon { width: var(--footer-icon); height: var(--footer-icon); color: var(--orange); margin-top: 3px; }
+/* Company description is justified (hyphens avoid big gaps between words).
+   Addresses use deliberate line breaks instead, so they read as even blocks. */
+.footer__brand > p:not(.footer__line) { text-align: justify; hyphens: auto; }
 /* Office headings start where the text starts, not where the icon starts */
 .footer__col--office h4 { padding-left: calc(var(--footer-icon) + var(--footer-icon-gap)); }
 .footer__social { display: flex; gap: 10px; }
